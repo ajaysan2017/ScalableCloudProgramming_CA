@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+data/
+*.jsonl
+speed_view_latest.json
+.env
+.venv/

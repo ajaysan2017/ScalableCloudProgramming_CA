@@ -1,0 +1,55 @@
+<svg width="680" height="600" viewBox="0 0 680 600" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Lambda architecture for the Wikimedia edit-stream analytics pipeline</title>
+<desc>A Wikimedia SSE stream flows into an ingestion stage, which feeds two parallel paths - a speed layer and a batch layer - both inside an auto-scaling boundary. Both paths feed a serving layer, which feeds a dashboard.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="680" height="600" fill="#FFFFFF"/>
+<rect x="135" y="126" width="410" height="338" rx="8" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="5 5"/>
+<text x="340" y="142" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">Auto-scaling infrastructure (EC2 ASG / EMR managed scaling)</text>
+
+<g>
+<rect x="240" y="40" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="340" y="62" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Stream source</text>
+<text x="340" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444441">Wikimedia SSE stream</text>
+</g>
+
+<g>
+<rect x="240" y="156" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="178" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#042C53">Ingestion</text>
+<text x="340" y="196" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0C447C">SSE client -&gt; Kinesis + archive</text>
+</g>
+
+<g>
+<rect x="155" y="272" width="170" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="240" y="294" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#042C53">Speed layer</text>
+<text x="240" y="312" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0C447C">5-min sliding window</text>
+</g>
+
+<g>
+<rect x="365" y="272" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="445" y="294" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#042C53">Batch layer</text>
+<text x="445" y="312" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0C447C">Spark batch on EMR</text>
+</g>
+
+<g>
+<rect x="240" y="388" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="410" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#042C53">Serving layer</text>
+<text x="340" y="428" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0C447C">S3 + Athena merge</text>
+</g>
+
+<g>
+<rect x="240" y="504" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="340" y="526" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Dashboard</text>
+<text x="340" y="544" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444441">Current vs. baseline</text>
+</g>
+
+<line x1="340" y1="96" x2="340" y2="156" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M340 212 L340 242 L240 242 L240 272" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M340 212 L340 242 L445 242 L445 272" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M240 328 L240 358 L340 358 L340 388" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M445 328 L445 358 L340 358 L340 388" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="444" x2="340" y2="504" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
