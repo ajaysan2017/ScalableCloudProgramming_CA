@@ -5,3 +5,4 @@ data/
 speed_view_latest.json
 .env
 .venv/
+.DS_Store
