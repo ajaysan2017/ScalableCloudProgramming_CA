@@ -41,6 +41,19 @@ except ImportError:
 WIKIMEDIA_STREAM_URL = "https://stream.wikimedia.org/v2/stream/recentchange"
 RECONNECT_WAIT_SECONDS = 5
 
+# Wikimedia enforces a User-Agent policy on all endpoints, including
+# EventStreams: requests without a descriptive User-Agent (e.g. the
+# default python-requests UA) are rejected with a 403. See:
+# https://meta.wikimedia.org/wiki/User-Agent_policy
+REQUEST_HEADERS = {
+    "Accept": "text/event-stream",
+    "User-Agent": (
+        "ScalableCloudProgrammingCA/1.0 "
+        "(https://github.com/ajaysan2017/ScalableCloudProgramming_CA; "
+        "ajaysan2017@gmail.com) python-requests"
+    ),
+}
+
 
 def flatten_event(event: dict) -> dict:
     length = event.get("length") or {}
@@ -70,8 +83,7 @@ def sse_events(url: str):
     """
     while True:
         try:
-            resp = requests.get(url, stream=True, timeout=60,
-                                 headers={"Accept": "text/event-stream"})
+            resp = requests.get(url, stream=True, timeout=60, headers=REQUEST_HEADERS)
             resp.raise_for_status()
 
             data_lines = []
