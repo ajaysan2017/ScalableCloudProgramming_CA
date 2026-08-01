@@ -153,9 +153,10 @@ if __name__ == "__main__":
     parser.add_argument("--batch-baseline", default=BATCH_BASELINE_PATH)
     parser.add_argument("--speed-view", default=SPEED_VIEW_PATH)
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--host", default="localhost", help="use 0.0.0.0 to accept connections from outside this machine (e.g. on EC2)")
     args = parser.parse_args()
 
-    server = HTTPServer(("localhost", args.port), make_handler(args.batch_baseline, args.speed_view))
-    print(f"Dashboard running at http://localhost:{args.port}")
+    server = HTTPServer((args.host, args.port), make_handler(args.batch_baseline, args.speed_view))
+    print(f"Dashboard running at http://{args.host}:{args.port}")
     print(f"Reading batch baseline from {args.batch_baseline}, speed view from {args.speed_view}")
     server.serve_forever()
