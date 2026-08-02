@@ -39,7 +39,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Lambdascope</title>
+<title>WIKI-INSIGHTS</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -102,7 +102,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
   <header>
     <div class="brand-row">
-      <span class="brand">LAMBDASCOPE</span>
+      <span class="brand">WIKI-INSIGHTS</span>
       <span class="subtitle">real-time Wikipedia edit analytics -- batch + speed layers</span>
     </div>
     <div class="status" id="status"><span class="live-dot"></span>connecting...</div>
