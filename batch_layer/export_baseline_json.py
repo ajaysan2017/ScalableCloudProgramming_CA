@@ -29,6 +29,7 @@ def main():
     counts = defaultdict(int)
     bytes_sums = defaultdict(float)
     bytes_counts = defaultdict(int)
+    bot_counts = defaultdict(int)
 
     with open(args.input) as f:
         for line in f:
@@ -44,12 +45,18 @@ def main():
             if bc is not None:
                 bytes_sums[wiki] += bc
                 bytes_counts[wiki] += 1
+            if record.get("bot"):
+                bot_counts[wiki] += 1
 
     baseline = {}
     for wiki, count in counts.items():
         avg_bc = bytes_sums[wiki] / bytes_counts[wiki] if bytes_counts[wiki] else None
-        baseline[wiki] = {"edit_count": count, "avg_bytes_changed": avg_bc}
-
+        bot_fraction = bot_counts[wiki] / count if count else 0.0
+        baseline[wiki] = {
+            "edit_count": count,
+            "avg_bytes_changed": avg_bc,
+            "bot_edit_fraction": round(bot_fraction, 4),
+        }
     with open(args.out, "w") as f:
         json.dump(baseline, f, indent=2)
 

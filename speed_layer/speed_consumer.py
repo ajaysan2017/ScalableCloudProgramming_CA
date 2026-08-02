@@ -42,18 +42,41 @@ def prune_window(window: deque, window_seconds: int):
         window.popleft()
 
 
-def compute_counts(window: deque):
-    counts = {}
-    for _, wiki in window:
-        counts[wiki] = counts.get(wiki, 0) + 1
-    return dict(sorted(counts.items(), key=lambda kv: kv[1], reverse=True))
+def compute_view(window: deque):
+    """
+    Builds the per-wiki live stats (count + bot count) plus overall
+    totals (edits in window, human vs. bot split) for the current
+    window contents. Window entries are (ingest_time, wiki, is_bot).
+    """
+    wiki_stats = {}
+    human_total = 0
+    bot_total = 0
 
+    for _, wiki, is_bot in window:
+        stats = wiki_stats.setdefault(wiki, {"count": 0, "bot_count": 0})
+        stats["count"] += 1
+        if is_bot:
+            stats["bot_count"] += 1
+            bot_total += 1
+        else:
+            human_total += 1
+
+    wiki_stats = dict(sorted(wiki_stats.items(), key=lambda kv: kv[1]["count"], reverse=True))
+    total = human_total + bot_total
+    bot_ratio = (bot_total / total * 100) if total else 0.0
+
+    return wiki_stats, {
+        "edits_in_window": total,
+        "human_edits": human_total,
+        "bot_edits": bot_total,
+        "bot_ratio_pct": round(bot_ratio, 1),
+    }
 
 def run(stream_name: str, window_minutes: int, region_name: str, out_path: str):
     client = boto3.client("kinesis", region_name=region_name)
     iterators = get_shard_iterators(client, stream_name)
     window_seconds = window_minutes * 60
-    window = deque()  # (ingest_time, wiki)
+    window = deque()  # (ingest_time, wiki, is_bot)
 
     last_refresh = 0
     print(f"Consuming '{stream_name}' with a {window_minutes}-minute sliding window...")
@@ -72,25 +95,25 @@ def run(stream_name: str, window_minutes: int, region_name: str, out_path: str):
                     continue
                 wiki = payload.get("wiki")
                 if wiki:
-                    window.append((time.time(), wiki))
+                    window.append((time.time(), wiki, bool(payload.get("bot"))))
 
         prune_window(window, window_seconds)
 
         if time.time() - last_refresh >= REFRESH_SECONDS:
-            counts = compute_counts(window)
+            wiki_stats, totals = compute_view(window)
             output = {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
                 "window_minutes": window_minutes,
-                "wiki_counts": counts,
+                "totals": totals,
+                "wiki_stats": wiki_stats,
             }
             with open(out_path, "w") as f:
                 json.dump(output, f, indent=2)
-            print(f"[{output['generated_at']}] {len(window)} events in window, "
-                  f"{len(counts)} active wikis -> wrote {out_path}")
+            print(f"[{output['generated_at']}] {totals['edits_in_window']} events in window, "
+                  f"{len(wiki_stats)} active wikis, bot ratio {totals['bot_ratio_pct']}% -> wrote {out_path}")
             last_refresh = time.time()
 
         time.sleep(1)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Sliding-window Kinesis consumer for the speed layer.")

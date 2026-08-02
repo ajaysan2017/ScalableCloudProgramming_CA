@@ -1,3354 +1,4192 @@
 {
   "wikidatawiki": {
     "edit_count": 897253,
-    "avg_bytes_changed": 404.8475735934506
+    "avg_bytes_changed": 404.8475735934506,
+    "bot_edit_fraction": 0.3361
   },
   "viwiki": {
     "edit_count": 12816,
-    "avg_bytes_changed": 205.70728274891522
+    "avg_bytes_changed": 205.70728274891522,
+    "bot_edit_fraction": 0.3862
   },
   "cewiki": {
     "edit_count": 264605,
-    "avg_bytes_changed": -42.74359571670111
+    "avg_bytes_changed": -42.74359571670111,
+    "bot_edit_fraction": 0.9993
   },
   "commonswiki": {
     "edit_count": 1807644,
-    "avg_bytes_changed": 1422.2255526068388
+    "avg_bytes_changed": 1422.2255526068388,
+    "bot_edit_fraction": 0.4386
   },
   "frwiki": {
     "edit_count": 118675,
-    "avg_bytes_changed": 157.24782322210194
+    "avg_bytes_changed": 157.24782322210194,
+    "bot_edit_fraction": 0.428
   },
   "dewiki": {
     "edit_count": 53632,
-    "avg_bytes_changed": 103.46488785377956
+    "avg_bytes_changed": 103.46488785377956,
+    "bot_edit_fraction": 0.1439
   },
   "enwiki": {
     "edit_count": 623418,
-    "avg_bytes_changed": 136.85831254604437
+    "avg_bytes_changed": 136.85831254604437,
+    "bot_edit_fraction": 0.0811
   },
   "cswiki": {
     "edit_count": 11697,
-    "avg_bytes_changed": 88.77738036507154
+    "avg_bytes_changed": 88.77738036507154,
+    "bot_edit_fraction": 0.4691
   },
   "hewiki": {
     "edit_count": 16769,
-    "avg_bytes_changed": 170.52897681854517
+    "avg_bytes_changed": 170.52897681854517,
+    "bot_edit_fraction": 0.1006
   },
   "isvwiki": {
     "edit_count": 3227,
-    "avg_bytes_changed": 19.131564400221116
+    "avg_bytes_changed": 19.131564400221116,
+    "bot_edit_fraction": 0.4915
   },
   "csbwiki": {
     "edit_count": 572,
-    "avg_bytes_changed": 131.01149425287358
+    "avg_bytes_changed": 131.01149425287358,
+    "bot_edit_fraction": 0.0035
   },
   "nowiki": {
     "edit_count": 4964,
-    "avg_bytes_changed": 315.86853552440795
+    "avg_bytes_changed": 315.86853552440795,
+    "bot_edit_fraction": 0.1626
   },
   "frwiktionary": {
     "edit_count": 10431,
-    "avg_bytes_changed": 92.48390197020663
+    "avg_bytes_changed": 92.48390197020663,
+    "bot_edit_fraction": 0.0061
   },
   "ltwiki": {
     "edit_count": 2258,
-    "avg_bytes_changed": 92.96951219512195
+    "avg_bytes_changed": 92.96951219512195,
+    "bot_edit_fraction": 0.2622
   },
   "ruwiki": {
     "edit_count": 83636,
-    "avg_bytes_changed": 172.2246610203189
+    "avg_bytes_changed": 172.2246610203189,
+    "bot_edit_fraction": 0.4991
   },
   "itwiki": {
     "edit_count": 30016,
-    "avg_bytes_changed": 103.3835719668425
+    "avg_bytes_changed": 103.3835719668425,
+    "bot_edit_fraction": 0.1503
   },
   "mkwiki": {
     "edit_count": 1011,
-    "avg_bytes_changed": 181.2565445026178
+    "avg_bytes_changed": 181.2565445026178,
+    "bot_edit_fraction": 0.1543
   },
   "astwiki": {
     "edit_count": 308,
-    "avg_bytes_changed": 37.46875
+    "avg_bytes_changed": 37.46875,
+    "bot_edit_fraction": 0.4156
   },
   "ptwiki": {
     "edit_count": 20555,
-    "avg_bytes_changed": 287.0300285517377
+    "avg_bytes_changed": 287.0300285517377,
+    "bot_edit_fraction": 0.1112
   },
   "jawiki": {
     "edit_count": 31629,
-    "avg_bytes_changed": 145.2987943298189
+    "avg_bytes_changed": 145.2987943298189,
+    "bot_edit_fraction": 0.1668
   },
   "srwiki": {
     "edit_count": 5593,
-    "avg_bytes_changed": 285.45911949685535
+    "avg_bytes_changed": 285.45911949685535,
+    "bot_edit_fraction": 0.135
   },
   "idwiki": {
     "edit_count": 13250,
-    "avg_bytes_changed": 261.4009194289862
+    "avg_bytes_changed": 261.4009194289862,
+    "bot_edit_fraction": 0.0198
   },
   "enwikisource": {
     "edit_count": 9805,
-    "avg_bytes_changed": 118.24101068999028
+    "avg_bytes_changed": 118.24101068999028,
+    "bot_edit_fraction": 0.0206
   },
   "zhwiki": {
     "edit_count": 39104,
-    "avg_bytes_changed": 118.10433618292306
+    "avg_bytes_changed": 118.10433618292306,
+    "bot_edit_fraction": 0.192
   },
   "arwiki": {
     "edit_count": 53903,
-    "avg_bytes_changed": 165.1128927842239
+    "avg_bytes_changed": 165.1128927842239,
+    "bot_edit_fraction": 0.7318
   },
   "incubatorwiki": {
     "edit_count": 2462,
-    "avg_bytes_changed": 76.92834695160276
+    "avg_bytes_changed": 76.92834695160276,
+    "bot_edit_fraction": 0.0049
   },
   "kawiki": {
     "edit_count": 3479,
-    "avg_bytes_changed": 406.5441778818022
+    "avg_bytes_changed": 406.5441778818022,
+    "bot_edit_fraction": 0.0405
   },
   "cawiki": {
     "edit_count": 12426,
-    "avg_bytes_changed": 60.47369467926405
+    "avg_bytes_changed": 60.47369467926405,
+    "bot_edit_fraction": 0.6099
   },
   "glwiki": {
     "edit_count": 6660,
-    "avg_bytes_changed": -68.52387096774194
+    "avg_bytes_changed": -68.52387096774194,
+    "bot_edit_fraction": 0.0488
   },
   "nlwiki": {
     "edit_count": 16643,
-    "avg_bytes_changed": 101.03591130340725
+    "avg_bytes_changed": 101.03591130340725,
+    "bot_edit_fraction": 0.429
   },
   "eswiki": {
     "edit_count": 39881,
-    "avg_bytes_changed": 193.60907530981888
+    "avg_bytes_changed": 193.60907530981888,
+    "bot_edit_fraction": 0.1173
   },
   "huwiki": {
     "edit_count": 4592,
-    "avg_bytes_changed": 286.04437086092713
+    "avg_bytes_changed": 286.04437086092713,
+    "bot_edit_fraction": 0.162
   },
   "fawiki": {
     "edit_count": 16619,
-    "avg_bytes_changed": 263.9622817539651
+    "avg_bytes_changed": 263.9622817539651,
+    "bot_edit_fraction": 0.2616
   },
   "nlwiktionary": {
     "edit_count": 4619,
-    "avg_bytes_changed": 55.94505494505494
+    "avg_bytes_changed": 55.94505494505494,
+    "bot_edit_fraction": 0.1381
   },
   "mgwiktionary": {
     "edit_count": 10871,
-    "avg_bytes_changed": 50.490269461077844
+    "avg_bytes_changed": 50.490269461077844,
+    "bot_edit_fraction": 0.9998
   },
   "rowiki": {
     "edit_count": 8205,
-    "avg_bytes_changed": 74.1746959775491
+    "avg_bytes_changed": 74.1746959775491,
+    "bot_edit_fraction": 0.3132
   },
   "ruwiktionary": {
     "edit_count": 7833,
-    "avg_bytes_changed": 170.89621771217713
+    "avg_bytes_changed": 170.89621771217713,
+    "bot_edit_fraction": 0.2405
   },
   "kowiki": {
     "edit_count": 13147,
-    "avg_bytes_changed": 345.3146407519516
+    "avg_bytes_changed": 345.3146407519516,
+    "bot_edit_fraction": 0.2256
   },
   "ukwiki": {
     "edit_count": 15849,
-    "avg_bytes_changed": 220.57042763952646
+    "avg_bytes_changed": 220.57042763952646,
+    "bot_edit_fraction": 0.1455
   },
   "urwiki": {
     "edit_count": 33684,
-    "avg_bytes_changed": 18.71329128986197
+    "avg_bytes_changed": 18.71329128986197,
+    "bot_edit_fraction": 0.4563
   },
   "ndswiki": {
     "edit_count": 243,
-    "avg_bytes_changed": 11.833333333333334
+    "avg_bytes_changed": 11.833333333333334,
+    "bot_edit_fraction": 0.7407
   },
   "enwiktionary": {
     "edit_count": 62369,
-    "avg_bytes_changed": 93.51034654699576
+    "avg_bytes_changed": 93.51034654699576,
+    "bot_edit_fraction": 0.1126
   },
   "trwiktionary": {
     "edit_count": 2574,
-    "avg_bytes_changed": -12.983037779491134
+    "avg_bytes_changed": -12.983037779491134,
+    "bot_edit_fraction": 0.3197
   },
   "zhwikiquote": {
     "edit_count": 107,
-    "avg_bytes_changed": 270.1515151515151
+    "avg_bytes_changed": 270.1515151515151,
+    "bot_edit_fraction": 0.0
   },
   "mrwikisource": {
     "edit_count": 317,
-    "avg_bytes_changed": 36.00689655172414
+    "avg_bytes_changed": 36.00689655172414,
+    "bot_edit_fraction": 0.0
   },
   "shwiki": {
     "edit_count": 2448,
-    "avg_bytes_changed": 71.55205278592375
+    "avg_bytes_changed": 71.55205278592375,
+    "bot_edit_fraction": 0.4857
   },
   "simplewiki": {
     "edit_count": 3761,
-    "avg_bytes_changed": 215.9022857142857
+    "avg_bytes_changed": 215.9022857142857,
+    "bot_edit_fraction": 0.0896
   },
   "anwiki": {
     "edit_count": 4827,
-    "avg_bytes_changed": 150.16331096196868
+    "avg_bytes_changed": 150.16331096196868,
+    "bot_edit_fraction": 0.7524
   },
   "trwiki": {
     "edit_count": 30595,
-    "avg_bytes_changed": 56.16913783635365
+    "avg_bytes_changed": 56.16913783635365,
+    "bot_edit_fraction": 0.0391
   },
   "lgwiki": {
     "edit_count": 538,
-    "avg_bytes_changed": 196.1986301369863
+    "avg_bytes_changed": 196.1986301369863,
+    "bot_edit_fraction": 0.1022
   },
   "itwiktionary": {
     "edit_count": 416,
-    "avg_bytes_changed": 73.94736842105263
+    "avg_bytes_changed": 73.94736842105263,
+    "bot_edit_fraction": 0.0
   },
   "tawiki": {
     "edit_count": 3745,
-    "avg_bytes_changed": 308.7015635622026
+    "avg_bytes_changed": 308.7015635622026,
+    "bot_edit_fraction": 0.0681
   },
   "plwiki": {
     "edit_count": 21989,
-    "avg_bytes_changed": 237.5857891882119
+    "avg_bytes_changed": 237.5857891882119,
+    "bot_edit_fraction": 0.2809
   },
   "kswiki": {
     "edit_count": 296,
-    "avg_bytes_changed": 401.2171052631579
+    "avg_bytes_changed": 401.2171052631579,
+    "bot_edit_fraction": 0.2162
   },
   "uzwiki": {
     "edit_count": 3749,
-    "avg_bytes_changed": 84.30028063610851
+    "avg_bytes_changed": 84.30028063610851,
+    "bot_edit_fraction": 0.0886
   },
   "hawiki": {
     "edit_count": 901,
-    "avg_bytes_changed": 275.56198347107437
+    "avg_bytes_changed": 275.56198347107437,
+    "bot_edit_fraction": 0.263
   },
   "sdwiki": {
     "edit_count": 1338,
-    "avg_bytes_changed": 1650.0308788598575
+    "avg_bytes_changed": 1650.0308788598575,
+    "bot_edit_fraction": 0.003
   },
   "plwikisource": {
     "edit_count": 2061,
-    "avg_bytes_changed": 7.285407725321888
+    "avg_bytes_changed": 7.285407725321888,
+    "bot_edit_fraction": 0.0767
   },
   "brwiki": {
     "edit_count": 89,
-    "avg_bytes_changed": 166.70422535211267
+    "avg_bytes_changed": 166.70422535211267,
+    "bot_edit_fraction": 0.1236
   },
   "sqwiki": {
     "edit_count": 387,
-    "avg_bytes_changed": 283.2913043478261
+    "avg_bytes_changed": 283.2913043478261,
+    "bot_edit_fraction": 0.354
   },
   "mswiktionary": {
     "edit_count": 2062,
-    "avg_bytes_changed": 33.58426966292135
+    "avg_bytes_changed": 33.58426966292135,
+    "bot_edit_fraction": 0.0024
   },
   "frwikisource": {
     "edit_count": 7699,
-    "avg_bytes_changed": 56.805293005671075
+    "avg_bytes_changed": 56.805293005671075,
+    "bot_edit_fraction": 0.0692
   },
   "metawiki": {
     "edit_count": 7389,
-    "avg_bytes_changed": 465.42263573795566
+    "avg_bytes_changed": 465.42263573795566,
+    "bot_edit_fraction": 0.2616
   },
   "thwiki": {
     "edit_count": 5914,
-    "avg_bytes_changed": 357.6977428851815
+    "avg_bytes_changed": 357.6977428851815,
+    "bot_edit_fraction": 0.0096
   },
   "etwiki": {
     "edit_count": 2757,
-    "avg_bytes_changed": -150.53456221198158
+    "avg_bytes_changed": -150.53456221198158,
+    "bot_edit_fraction": 0.477
   },
   "lawiki": {
     "edit_count": 719,
-    "avg_bytes_changed": 132.45637583892616
+    "avg_bytes_changed": 132.45637583892616,
+    "bot_edit_fraction": 0.1099
   },
   "mediawikiwiki": {
     "edit_count": 4445,
-    "avg_bytes_changed": 45.59279279279279
+    "avg_bytes_changed": 45.59279279279279,
+    "bot_edit_fraction": 0.1667
   },
   "fiwiki": {
     "edit_count": 4749,
-    "avg_bytes_changed": 164.15639374425024
+    "avg_bytes_changed": 164.15639374425024,
+    "bot_edit_fraction": 0.1813
   },
   "dewikisource": {
     "edit_count": 6533,
-    "avg_bytes_changed": 145.66084337349398
+    "avg_bytes_changed": 145.66084337349398,
+    "bot_edit_fraction": 0.6626
   },
   "bewiki": {
     "edit_count": 2118,
-    "avg_bytes_changed": 150.8278008298755
+    "avg_bytes_changed": 150.8278008298755,
+    "bot_edit_fraction": 0.1553
   },
   "hywiki": {
     "edit_count": 2915,
-    "avg_bytes_changed": 689.3815789473684
+    "avg_bytes_changed": 689.3815789473684,
+    "bot_edit_fraction": 0.1976
   },
   "specieswiki": {
     "edit_count": 5875,
-    "avg_bytes_changed": 76.45843461351483
+    "avg_bytes_changed": 76.45843461351483,
+    "bot_edit_fraction": 0.102
   },
   "kuwiktionary": {
     "edit_count": 552,
-    "avg_bytes_changed": 219.26254826254825
+    "avg_bytes_changed": 219.26254826254825,
+    "bot_edit_fraction": 0.0
   },
   "fiwiktionary": {
     "edit_count": 788,
-    "avg_bytes_changed": 52.16770186335404
+    "avg_bytes_changed": 52.16770186335404,
+    "bot_edit_fraction": 0.0901
   },
   "bgwiki": {
     "edit_count": 2258,
-    "avg_bytes_changed": 159.16376042456406
+    "avg_bytes_changed": 159.16376042456406,
+    "bot_edit_fraction": 0.1182
   },
   "enwikivoyage": {
     "edit_count": 1170,
-    "avg_bytes_changed": 102.32991014120668
+    "avg_bytes_changed": 102.32991014120668,
+    "bot_edit_fraction": 0.0299
   },
   "fawikisource": {
     "edit_count": 780,
-    "avg_bytes_changed": 385.1967213114754
+    "avg_bytes_changed": 385.1967213114754,
+    "bot_edit_fraction": 0.0077
   },
   "elwiki": {
     "edit_count": 5497,
-    "avg_bytes_changed": 129.47431810131067
+    "avg_bytes_changed": 129.47431810131067,
+    "bot_edit_fraction": 0.0051
   },
   "cywiki": {
     "edit_count": 6824,
-    "avg_bytes_changed": -1.097052367513327
+    "avg_bytes_changed": -1.097052367513327,
+    "bot_edit_fraction": 0.898
   },
   "htwiki": {
     "edit_count": 83,
-    "avg_bytes_changed": 848.0392156862745
+    "avg_bytes_changed": 848.0392156862745,
+    "bot_edit_fraction": 0.1084
   },
   "lvwiki": {
     "edit_count": 924,
-    "avg_bytes_changed": 191.92747559274756
+    "avg_bytes_changed": 191.92747559274756,
+    "bot_edit_fraction": 0.1548
   },
   "ttwiki": {
     "edit_count": 267,
-    "avg_bytes_changed": 411.50602409638554
+    "avg_bytes_changed": 411.50602409638554,
+    "bot_edit_fraction": 0.4869
   },
   "hrwiki": {
     "edit_count": 1514,
-    "avg_bytes_changed": 177.79713603818615
+    "avg_bytes_changed": 177.79713603818615,
+    "bot_edit_fraction": 0.218
   },
   "svwiki": {
     "edit_count": 8796,
-    "avg_bytes_changed": 121.65876668200644
+    "avg_bytes_changed": 121.65876668200644,
+    "bot_edit_fraction": 0.118
   },
   "skwiki": {
     "edit_count": 1969,
-    "avg_bytes_changed": 109.81146304675717
+    "avg_bytes_changed": 109.81146304675717,
+    "bot_edit_fraction": 0.3951
   },
   "azwiki": {
     "edit_count": 2491,
-    "avg_bytes_changed": 283.5626204238921
+    "avg_bytes_changed": 283.5626204238921,
+    "bot_edit_fraction": 0.0438
   },
   "bnwiki": {
     "edit_count": 5571,
-    "avg_bytes_changed": 681.1277967387182
+    "avg_bytes_changed": 681.1277967387182,
+    "bot_edit_fraction": 0.1091
   },
   "mywiki": {
     "edit_count": 655,
-    "avg_bytes_changed": 318.8615384615385
+    "avg_bytes_changed": 318.8615384615385,
+    "bot_edit_fraction": 0.0824
   },
   "brwiktionary": {
     "edit_count": 316,
-    "avg_bytes_changed": -4.855555555555555
+    "avg_bytes_changed": -4.855555555555555,
+    "bot_edit_fraction": 0.0
   },
   "dawikisource": {
     "edit_count": 548,
-    "avg_bytes_changed": -42.92613636363637
+    "avg_bytes_changed": -42.92613636363637,
+    "bot_edit_fraction": 0.0401
   },
   "ocwiki": {
     "edit_count": 268,
-    "avg_bytes_changed": 244.7793103448276
+    "avg_bytes_changed": 244.7793103448276,
+    "bot_edit_fraction": 0.1866
   },
   "gvwiki": {
     "edit_count": 873,
-    "avg_bytes_changed": 25.695652173913043
+    "avg_bytes_changed": 25.695652173913043,
+    "bot_edit_fraction": 0.0011
   },
   "dawiki": {
     "edit_count": 1581,
-    "avg_bytes_changed": 613.8757225433526
+    "avg_bytes_changed": 613.8757225433526,
+    "bot_edit_fraction": 0.191
   },
   "slwiki": {
     "edit_count": 2511,
-    "avg_bytes_changed": 181.83245767659076
+    "avg_bytes_changed": 181.83245767659076,
+    "bot_edit_fraction": 0.4158
   },
   "kywiki": {
     "edit_count": 117,
-    "avg_bytes_changed": 495.90909090909093
+    "avg_bytes_changed": 495.90909090909093,
+    "bot_edit_fraction": 0.3333
   },
   "idwiktionary": {
     "edit_count": 301,
-    "avg_bytes_changed": 68.97368421052632
+    "avg_bytes_changed": 68.97368421052632,
+    "bot_edit_fraction": 0.0
   },
   "viwiktionary": {
     "edit_count": 7823,
-    "avg_bytes_changed": 8.854954034729316
+    "avg_bytes_changed": 8.854954034729316,
+    "bot_edit_fraction": 0.6159
   },
   "arzwiki": {
     "edit_count": 3276,
-    "avg_bytes_changed": 480.99088145896656
+    "avg_bytes_changed": 480.99088145896656,
+    "bot_edit_fraction": 0.515
   },
   "fywiki": {
     "edit_count": 304,
-    "avg_bytes_changed": 257.24657534246575
+    "avg_bytes_changed": 257.24657534246575,
+    "bot_edit_fraction": 0.0
   },
   "plwikivoyage": {
     "edit_count": 28,
-    "avg_bytes_changed": 2029.4
+    "avg_bytes_changed": 2029.4,
+    "bot_edit_fraction": 0.0
   },
   "suwiki": {
     "edit_count": 129,
-    "avg_bytes_changed": 140.34259259259258
+    "avg_bytes_changed": 140.34259259259258,
+    "bot_edit_fraction": 0.0465
   },
   "mswiki": {
     "edit_count": 3760,
-    "avg_bytes_changed": 834.3333333333334
+    "avg_bytes_changed": 834.3333333333334,
+    "bot_edit_fraction": 0.0082
   },
   "dewiktionary": {
     "edit_count": 3600,
-    "avg_bytes_changed": 98.81804043545878
+    "avg_bytes_changed": 98.81804043545878,
+    "bot_edit_fraction": 0.0011
   },
   "gotwiki": {
     "edit_count": 47,
-    "avg_bytes_changed": 155.6
+    "avg_bytes_changed": 155.6,
+    "bot_edit_fraction": 0.1064
   },
   "afwiki": {
     "edit_count": 437,
-    "avg_bytes_changed": 350.8643410852713
+    "avg_bytes_changed": 350.8643410852713,
+    "bot_edit_fraction": 0.0275
   },
   "ukwikisource": {
     "edit_count": 1403,
-    "avg_bytes_changed": 2039.3933333333334
+    "avg_bytes_changed": 2039.3933333333334,
+    "bot_edit_fraction": 0.0
   },
   "xmfwiki": {
     "edit_count": 71,
-    "avg_bytes_changed": 158.51351351351352
+    "avg_bytes_changed": 158.51351351351352,
+    "bot_edit_fraction": 0.2394
   },
   "thwikisource": {
     "edit_count": 562,
-    "avg_bytes_changed": 85.43455497382199
+    "avg_bytes_changed": 85.43455497382199,
+    "bot_edit_fraction": 0.0
   },
   "dagwiki": {
     "edit_count": 144,
-    "avg_bytes_changed": 284.8974358974359
+    "avg_bytes_changed": 284.8974358974359,
+    "bot_edit_fraction": 0.2083
   },
   "elwiktionary": {
     "edit_count": 1251,
-    "avg_bytes_changed": 143.17732558139534
+    "avg_bytes_changed": 143.17732558139534,
+    "bot_edit_fraction": 0.0
   },
   "euwiki": {
     "edit_count": 2032,
-    "avg_bytes_changed": 169.05807200929152
+    "avg_bytes_changed": 169.05807200929152,
+    "bot_edit_fraction": 0.1742
   },
   "papwiki": {
     "edit_count": 107,
-    "avg_bytes_changed": 151.57777777777778
+    "avg_bytes_changed": 151.57777777777778,
+    "bot_edit_fraction": 0.0654
   },
   "labswiki": {
     "edit_count": 593,
-    "avg_bytes_changed": 118.5840554592721
+    "avg_bytes_changed": 118.5840554592721,
+    "bot_edit_fraction": 0.9106
   },
   "enwikiquote": {
     "edit_count": 1804,
-    "avg_bytes_changed": 421.3402854006586
+    "avg_bytes_changed": 421.3402854006586,
+    "bot_edit_fraction": 0.0078
   },
   "newiki": {
     "edit_count": 215,
-    "avg_bytes_changed": 563.3712121212121
+    "avg_bytes_changed": 563.3712121212121,
+    "bot_edit_fraction": 0.2512
   },
   "cywikisource": {
     "edit_count": 443,
-    "avg_bytes_changed": 39.77777777777778
+    "avg_bytes_changed": 39.77777777777778,
+    "bot_edit_fraction": 0.0
   },
   "tawikisource": {
     "edit_count": 479,
-    "avg_bytes_changed": 532.496855345912
+    "avg_bytes_changed": 532.496855345912,
+    "bot_edit_fraction": 0.0
   },
   "zhwikiversity": {
     "edit_count": 311,
-    "avg_bytes_changed": 115.62256809338521
+    "avg_bytes_changed": 115.62256809338521,
+    "bot_edit_fraction": 0.0161
   },
   "frwikivoyage": {
     "edit_count": 222,
-    "avg_bytes_changed": 349.0731707317073
+    "avg_bytes_changed": 349.0731707317073,
+    "bot_edit_fraction": 0.0135
   },
   "itwikisource": {
     "edit_count": 2270,
-    "avg_bytes_changed": 32.74418604651163
+    "avg_bytes_changed": 32.74418604651163,
+    "bot_edit_fraction": 0.0035
   },
   "pswiki": {
     "edit_count": 47,
-    "avg_bytes_changed": 200.9090909090909
+    "avg_bytes_changed": 200.9090909090909,
+    "bot_edit_fraction": 0.0426
   },
   "bnwikibooks": {
     "edit_count": 10,
-    "avg_bytes_changed": 522.8
+    "avg_bytes_changed": 522.8,
+    "bot_edit_fraction": 0.6
   },
   "itwikiquote": {
     "edit_count": 188,
-    "avg_bytes_changed": 397.495652173913
+    "avg_bytes_changed": 397.495652173913,
+    "bot_edit_fraction": 0.016
   },
   "guwikisource": {
     "edit_count": 166,
-    "avg_bytes_changed": 45.11904761904762
+    "avg_bytes_changed": 45.11904761904762,
+    "bot_edit_fraction": 0.0
   },
   "plwiktionary": {
     "edit_count": 1856,
-    "avg_bytes_changed": 99.67488262910798
+    "avg_bytes_changed": 99.67488262910798,
+    "bot_edit_fraction": 0.2532
   },
   "iglwiki": {
     "edit_count": 578,
-    "avg_bytes_changed": -121.97701149425288
+    "avg_bytes_changed": -121.97701149425288,
+    "bot_edit_fraction": 0.0
   },
   "bswiki": {
     "edit_count": 662,
-    "avg_bytes_changed": 273.30452674897117
+    "avg_bytes_changed": 273.30452674897117,
+    "bot_edit_fraction": 0.0982
   },
   "arwiktionary": {
     "edit_count": 931,
-    "avg_bytes_changed": 111.15384615384616
+    "avg_bytes_changed": 111.15384615384616,
+    "bot_edit_fraction": 0.0
   },
   "tgwiki": {
     "edit_count": 453,
-    "avg_bytes_changed": 647.7215189873418
+    "avg_bytes_changed": 647.7215189873418,
+    "bot_edit_fraction": 0.2804
   },
   "enwikiversity": {
     "edit_count": 395,
-    "avg_bytes_changed": 134.5026455026455
+    "avg_bytes_changed": 134.5026455026455,
+    "bot_edit_fraction": 0.0
   },
   "vowiki": {
     "edit_count": 563,
-    "avg_bytes_changed": 39.473684210526315
+    "avg_bytes_changed": 39.473684210526315,
+    "bot_edit_fraction": 0.0
   },
   "mnwiki": {
     "edit_count": 646,
-    "avg_bytes_changed": 366.38216560509557
+    "avg_bytes_changed": 366.38216560509557,
+    "bot_edit_fraction": 0.0372
   },
   "testwikidatawiki": {
     "edit_count": 454,
-    "avg_bytes_changed": 2.511056511056511
+    "avg_bytes_changed": 2.511056511056511,
+    "bot_edit_fraction": 0.9559
   },
   "itwikivoyage": {
     "edit_count": 860,
-    "avg_bytes_changed": 460.43532338308455
+    "avg_bytes_changed": 460.43532338308455,
+    "bot_edit_fraction": 0.0023
   },
   "lbwiki": {
     "edit_count": 583,
-    "avg_bytes_changed": 59.291666666666664
+    "avg_bytes_changed": 59.291666666666664,
+    "bot_edit_fraction": 0.2247
   },
   "bhwiki": {
     "edit_count": 92,
-    "avg_bytes_changed": 707.6944444444445
+    "avg_bytes_changed": 707.6944444444445,
+    "bot_edit_fraction": 0.0109
   },
   "eswiktionary": {
     "edit_count": 2652,
-    "avg_bytes_changed": 27.63238866396761
+    "avg_bytes_changed": 27.63238866396761,
+    "bot_edit_fraction": 0.477
   },
   "aswiki": {
     "edit_count": 385,
-    "avg_bytes_changed": 292.909375
+    "avg_bytes_changed": 292.909375,
+    "bot_edit_fraction": 0.1792
   },
   "aswikisource": {
     "edit_count": 300,
-    "avg_bytes_changed": 19.574468085106382
+    "avg_bytes_changed": 19.574468085106382,
+    "bot_edit_fraction": 0.0
   },
   "dgawiki": {
     "edit_count": 81,
-    "avg_bytes_changed": 878.3428571428572
+    "avg_bytes_changed": 878.3428571428572,
+    "bot_edit_fraction": 0.1235
   },
   "azbwiki": {
     "edit_count": 108,
-    "avg_bytes_changed": 633.074074074074
+    "avg_bytes_changed": 633.074074074074,
+    "bot_edit_fraction": 0.1019
   },
   "ptwikiversity": {
     "edit_count": 97,
-    "avg_bytes_changed": 200.06666666666666
+    "avg_bytes_changed": 200.06666666666666,
+    "bot_edit_fraction": 0.0
   },
   "bnwikisource": {
     "edit_count": 173,
-    "avg_bytes_changed": 37.70175438596491
+    "avg_bytes_changed": 37.70175438596491,
+    "bot_edit_fraction": 0.0289
   },
   "zhwikisource": {
     "edit_count": 940,
-    "avg_bytes_changed": 132.74885844748857
+    "avg_bytes_changed": 132.74885844748857,
+    "bot_edit_fraction": 0.016
   },
   "swwiki": {
     "edit_count": 426,
-    "avg_bytes_changed": 136.03508771929825
+    "avg_bytes_changed": 136.03508771929825,
+    "bot_edit_fraction": 0.2606
   },
   "scowiki": {
     "edit_count": 133,
-    "avg_bytes_changed": 270.9850746268657
+    "avg_bytes_changed": 270.9850746268657,
+    "bot_edit_fraction": 0.2105
   },
   "hiwikibooks": {
     "edit_count": 11,
-    "avg_bytes_changed": 403.0
+    "avg_bytes_changed": 403.0,
+    "bot_edit_fraction": 0.0
   },
   "kkwiki": {
     "edit_count": 1446,
-    "avg_bytes_changed": 244.3873744619799
+    "avg_bytes_changed": 244.3873744619799,
+    "bot_edit_fraction": 0.0145
   },
   "yiwiki": {
     "edit_count": 24,
-    "avg_bytes_changed": 9357.166666666666
+    "avg_bytes_changed": 9357.166666666666,
+    "bot_edit_fraction": 0.0
   },
   "iswiki": {
     "edit_count": 332,
-    "avg_bytes_changed": 139.48214285714286
+    "avg_bytes_changed": 139.48214285714286,
+    "bot_edit_fraction": 0.0271
   },
   "glwiktionary": {
     "edit_count": 313,
-    "avg_bytes_changed": 2752.5862068965516
+    "avg_bytes_changed": 2752.5862068965516,
+    "bot_edit_fraction": 0.0
   },
   "ruwikiquote": {
     "edit_count": 32126,
-    "avg_bytes_changed": -566.1908396946565
+    "avg_bytes_changed": -566.1908396946565,
+    "bot_edit_fraction": 0.9894
   },
   "mlwiki": {
     "edit_count": 774,
-    "avg_bytes_changed": 614.8058823529411
+    "avg_bytes_changed": 614.8058823529411,
+    "bot_edit_fraction": 0.1512
   },
   "pawiki": {
     "edit_count": 295,
-    "avg_bytes_changed": 324.95757575757574
+    "avg_bytes_changed": 324.95757575757574,
+    "bot_edit_fraction": 0.6034
   },
   "hewiktionary": {
     "edit_count": 26,
-    "avg_bytes_changed": 21.263157894736842
+    "avg_bytes_changed": 21.263157894736842,
+    "bot_edit_fraction": 0.0
   },
   "zuwiki": {
     "edit_count": 65,
-    "avg_bytes_changed": 292.36170212765956
+    "avg_bytes_changed": 292.36170212765956,
+    "bot_edit_fraction": 0.0154
   },
   "jvwiki": {
     "edit_count": 63,
-    "avg_bytes_changed": 824.5365853658536
+    "avg_bytes_changed": 824.5365853658536,
+    "bot_edit_fraction": 0.6508
   },
   "eowiki": {
     "edit_count": 2239,
-    "avg_bytes_changed": 88.7552400270453
+    "avg_bytes_changed": 88.7552400270453,
+    "bot_edit_fraction": 0.1398
   },
   "tnwiki": {
     "edit_count": 222,
-    "avg_bytes_changed": 3810.559633027523
+    "avg_bytes_changed": 3810.559633027523,
+    "bot_edit_fraction": 0.018
   },
   "quwiki": {
     "edit_count": 53,
-    "avg_bytes_changed": 203.875
+    "avg_bytes_changed": 203.875,
+    "bot_edit_fraction": 0.0
   },
   "eswikisource": {
     "edit_count": 334,
-    "avg_bytes_changed": 228.0737704918033
+    "avg_bytes_changed": 228.0737704918033,
+    "bot_edit_fraction": 0.009
   },
   "vewiki": {
     "edit_count": 22,
-    "avg_bytes_changed": 273.0
+    "avg_bytes_changed": 273.0,
+    "bot_edit_fraction": 0.0
   },
   "tewiki": {
     "edit_count": 2294,
-    "avg_bytes_changed": 1039.9436435124508
+    "avg_bytes_changed": 1039.9436435124508,
+    "bot_edit_fraction": 0.1552
   },
   "cswikiversity": {
     "edit_count": 101,
-    "avg_bytes_changed": 712.125
+    "avg_bytes_changed": 712.125,
+    "bot_edit_fraction": 0.0099
   },
   "simplewiktionary": {
     "edit_count": 583,
-    "avg_bytes_changed": 18.0
+    "avg_bytes_changed": 18.0,
+    "bot_edit_fraction": 0.0
   },
   "satwiktionary": {
     "edit_count": 7801,
-    "avg_bytes_changed": -71.49
+    "avg_bytes_changed": -71.49,
+    "bot_edit_fraction": 0.0014
   },
   "igwiki": {
     "edit_count": 144,
-    "avg_bytes_changed": 129.4375
+    "avg_bytes_changed": 129.4375,
+    "bot_edit_fraction": 0.5903
   },
   "hiwiki": {
     "edit_count": 810,
-    "avg_bytes_changed": 1293.4666666666667
+    "avg_bytes_changed": 1293.4666666666667,
+    "bot_edit_fraction": 0.0543
   },
   "banwiki": {
     "edit_count": 1812,
-    "avg_bytes_changed": 655.031007751938
+    "avg_bytes_changed": 655.031007751938,
+    "bot_edit_fraction": 0.17
   },
   "testwiki": {
     "edit_count": 467,
-    "avg_bytes_changed": 392.26146788990826
+    "avg_bytes_changed": 392.26146788990826,
+    "bot_edit_fraction": 0.3533
   },
   "ruewiki": {
     "edit_count": 61,
-    "avg_bytes_changed": 738.6578947368421
+    "avg_bytes_changed": 738.6578947368421,
+    "bot_edit_fraction": 0.0328
   },
   "angwiki": {
     "edit_count": 26,
-    "avg_bytes_changed": 54.5
+    "avg_bytes_changed": 54.5,
+    "bot_edit_fraction": 0.0
   },
   "shnwiki": {
     "edit_count": 6680,
-    "avg_bytes_changed": 4.208333333333333
+    "avg_bytes_changed": 4.208333333333333,
+    "bot_edit_fraction": 0.9909
   },
   "ruwikisource": {
     "edit_count": 765,
-    "avg_bytes_changed": 867.2661870503597
+    "avg_bytes_changed": 867.2661870503597,
+    "bot_edit_fraction": 0.0
   },
   "hewikisource": {
     "edit_count": 402,
-    "avg_bytes_changed": 2254.0323741007196
+    "avg_bytes_changed": 2254.0323741007196,
+    "bot_edit_fraction": 0.0597
   },
   "yowiki": {
     "edit_count": 71,
-    "avg_bytes_changed": 470.51020408163265
+    "avg_bytes_changed": 470.51020408163265,
+    "bot_edit_fraction": 0.6338
   },
   "nlwikimedia": {
     "edit_count": 3,
-    "avg_bytes_changed": 690.0
+    "avg_bytes_changed": 690.0,
+    "bot_edit_fraction": 0.0
   },
   "rwwiki": {
     "edit_count": 22,
-    "avg_bytes_changed": 332.2857142857143
+    "avg_bytes_changed": 332.2857142857143,
+    "bot_edit_fraction": 0.0909
   },
   "cowikimedia": {
     "edit_count": 35,
-    "avg_bytes_changed": 488.93939393939394
+    "avg_bytes_changed": 488.93939393939394,
+    "bot_edit_fraction": 0.0
   },
   "nsowiki": {
     "edit_count": 13,
-    "avg_bytes_changed": 180.75
+    "avg_bytes_changed": 180.75,
+    "bot_edit_fraction": 0.0
   },
   "lldwiki": {
     "edit_count": 38,
-    "avg_bytes_changed": 43.42424242424242
+    "avg_bytes_changed": 43.42424242424242,
+    "bot_edit_fraction": 0.0
   },
   "tawiktionary": {
     "edit_count": 6,
-    "avg_bytes_changed": 334.0
+    "avg_bytes_changed": 334.0,
+    "bot_edit_fraction": 0.0
   },
   "ladwiki": {
     "edit_count": 96,
-    "avg_bytes_changed": 773.0666666666667
+    "avg_bytes_changed": 773.0666666666667,
+    "bot_edit_fraction": 0.0
   },
   "ckbwiki": {
     "edit_count": 3381,
-    "avg_bytes_changed": 1854.5754437869823
+    "avg_bytes_changed": 1854.5754437869823,
+    "bot_edit_fraction": 0.3777
   },
   "thwiktionary": {
     "edit_count": 4617,
-    "avg_bytes_changed": 211.92635658914728
+    "avg_bytes_changed": 211.92635658914728,
+    "bot_edit_fraction": 0.812
   },
   "ruwikivoyage": {
     "edit_count": 279,
-    "avg_bytes_changed": 319.11
+    "avg_bytes_changed": 319.11,
+    "bot_edit_fraction": 0.0394
   },
   "amwiki": {
     "edit_count": 239,
-    "avg_bytes_changed": -3688.375
+    "avg_bytes_changed": -3688.375,
+    "bot_edit_fraction": 0.0084
   },
   "extwiki": {
     "edit_count": 17,
-    "avg_bytes_changed": 161.86666666666667
+    "avg_bytes_changed": 161.86666666666667,
+    "bot_edit_fraction": 0.0
   },
   "lowiki": {
     "edit_count": 46,
-    "avg_bytes_changed": 1320.6666666666667
+    "avg_bytes_changed": 1320.6666666666667,
+    "bot_edit_fraction": 0.0217
   },
   "cswikisource": {
     "edit_count": 264,
-    "avg_bytes_changed": 4108.857142857143
+    "avg_bytes_changed": 4108.857142857143,
+    "bot_edit_fraction": 0.0
   },
   "bnwikiquote": {
     "edit_count": 39,
-    "avg_bytes_changed": 271.55555555555554
+    "avg_bytes_changed": 271.55555555555554,
+    "bot_edit_fraction": 0.0
   },
   "jawiktionary": {
     "edit_count": 1750,
-    "avg_bytes_changed": 35.923497267759565
+    "avg_bytes_changed": 35.923497267759565,
+    "bot_edit_fraction": 0.1046
   },
   "gawiki": {
     "edit_count": 499,
-    "avg_bytes_changed": 63.795811518324605
+    "avg_bytes_changed": 63.795811518324605,
+    "bot_edit_fraction": 0.0281
   },
   "ocwiktionary": {
     "edit_count": 66,
-    "avg_bytes_changed": 208.625
+    "avg_bytes_changed": 208.625,
+    "bot_edit_fraction": 0.0606
   },
   "enwikibooks": {
     "edit_count": 138,
-    "avg_bytes_changed": 84.78
+    "avg_bytes_changed": 84.78,
+    "bot_edit_fraction": 0.0145
   },
   "enwikinews": {
     "edit_count": 7,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.1429
   },
   "loginwiki": {
     "edit_count": 128,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "trwikinews": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "trwikibooks": {
     "edit_count": 5,
-    "avg_bytes_changed": -7.4
+    "avg_bytes_changed": -7.4,
+    "bot_edit_fraction": 0.0
   },
   "lmowiki": {
     "edit_count": 13,
-    "avg_bytes_changed": 151.22222222222223
+    "avg_bytes_changed": 151.22222222222223,
+    "bot_edit_fraction": 0.3077
   },
   "viwikibooks": {
     "edit_count": 34,
-    "avg_bytes_changed": 412.56666666666666
+    "avg_bytes_changed": 412.56666666666666,
+    "bot_edit_fraction": 0.0
   },
   "dewikiversity": {
     "edit_count": 946,
-    "avg_bytes_changed": 662.6575342465753
+    "avg_bytes_changed": 662.6575342465753,
+    "bot_edit_fraction": 0.3044
   },
   "wikifunctionswiki": {
     "edit_count": 394,
-    "avg_bytes_changed": 160.20921985815602
+    "avg_bytes_changed": 160.20921985815602,
+    "bot_edit_fraction": 0.0178
   },
   "arywiki": {
     "edit_count": 227,
-    "avg_bytes_changed": 188.98529411764707
+    "avg_bytes_changed": 188.98529411764707,
+    "bot_edit_fraction": 0.1938
   },
   "iawiki": {
     "edit_count": 26,
-    "avg_bytes_changed": 963.1304347826087
+    "avg_bytes_changed": 963.1304347826087,
+    "bot_edit_fraction": 0.4615
   },
   "swwiktionary": {
     "edit_count": 11,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "emlwiki": {
     "edit_count": 23,
-    "avg_bytes_changed": 430.0
+    "avg_bytes_changed": 430.0,
+    "bot_edit_fraction": 0.0
   },
   "mrwiki": {
     "edit_count": 811,
-    "avg_bytes_changed": 1020.0050251256281
+    "avg_bytes_changed": 1020.0050251256281,
+    "bot_edit_fraction": 0.0703
   },
   "nnwiki": {
     "edit_count": 448,
-    "avg_bytes_changed": 276.5414847161572
+    "avg_bytes_changed": 276.5414847161572,
+    "bot_edit_fraction": 0.0
   },
   "orwiki": {
     "edit_count": 154,
-    "avg_bytes_changed": 115.71153846153847
+    "avg_bytes_changed": 115.71153846153847,
+    "bot_edit_fraction": 0.1688
   },
   "iewiki": {
     "edit_count": 20,
-    "avg_bytes_changed": 102.84615384615384
+    "avg_bytes_changed": 102.84615384615384,
+    "bot_edit_fraction": 0.0
   },
   "gpewiki": {
     "edit_count": 689,
-    "avg_bytes_changed": 191.86111111111111
+    "avg_bytes_changed": 191.86111111111111,
+    "bot_edit_fraction": 0.0174
   },
   "kuwiki": {
     "edit_count": 456,
-    "avg_bytes_changed": -650.5843137254902
+    "avg_bytes_changed": -650.5843137254902,
+    "bot_edit_fraction": 0.3816
   },
   "bewikimedia": {
     "edit_count": 9,
-    "avg_bytes_changed": 29.5
+    "avg_bytes_changed": 29.5,
+    "bot_edit_fraction": 0.1111
   },
   "siwiktionary": {
     "edit_count": 306,
-    "avg_bytes_changed": 461.5
+    "avg_bytes_changed": 461.5,
+    "bot_edit_fraction": 0.0
   },
   "sourceswiki": {
     "edit_count": 2429,
-    "avg_bytes_changed": 47.63620230700976
+    "avg_bytes_changed": 47.63620230700976,
+    "bot_edit_fraction": 0.9033
   },
   "test2wiki": {
     "edit_count": 154,
-    "avg_bytes_changed": 16.39622641509434
+    "avg_bytes_changed": 16.39622641509434,
+    "bot_edit_fraction": 0.6753
   },
   "tlwiki": {
     "edit_count": 566,
-    "avg_bytes_changed": 211.65740740740742
+    "avg_bytes_changed": 211.65740740740742,
+    "bot_edit_fraction": 0.5106
   },
   "tumwiki": {
     "edit_count": 440,
-    "avg_bytes_changed": 2718.685185185185
+    "avg_bytes_changed": 2718.685185185185,
+    "bot_edit_fraction": 0.0091
   },
   "adywiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 690.0
+    "avg_bytes_changed": 690.0,
+    "bot_edit_fraction": 0.0
   },
   "hiwikiquote": {
     "edit_count": 7,
-    "avg_bytes_changed": 1135.0
+    "avg_bytes_changed": 1135.0,
+    "bot_edit_fraction": 0.1429
   },
   "hiwikisource": {
     "edit_count": 59,
-    "avg_bytes_changed": 90.58620689655173
+    "avg_bytes_changed": 90.58620689655173,
+    "bot_edit_fraction": 0.0
   },
   "altwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 4.0
+    "avg_bytes_changed": 4.0,
+    "bot_edit_fraction": 0.0
   },
   "bawiki": {
     "edit_count": 35,
-    "avg_bytes_changed": 358.6666666666667
+    "avg_bytes_changed": 358.6666666666667,
+    "bot_edit_fraction": 0.5714
   },
   "tcywiki": {
     "edit_count": 65,
-    "avg_bytes_changed": 591.0555555555555
+    "avg_bytes_changed": 591.0555555555555,
+    "bot_edit_fraction": 0.0308
   },
   "inhwiki": {
     "edit_count": 16,
-    "avg_bytes_changed": 392.0
+    "avg_bytes_changed": 392.0,
+    "bot_edit_fraction": 0.0
   },
   "kaawiki": {
     "edit_count": 53,
-    "avg_bytes_changed": 197.4375
+    "avg_bytes_changed": 197.4375,
+    "bot_edit_fraction": 0.1887
   },
   "pawikisource": {
     "edit_count": 1587,
-    "avg_bytes_changed": 2.813528336380256
+    "avg_bytes_changed": 2.813528336380256,
+    "bot_edit_fraction": 0.0
   },
   "koiwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 758.0
+    "avg_bytes_changed": 758.0,
+    "bot_edit_fraction": 0.0
   },
   "abwiki": {
     "edit_count": 64,
-    "avg_bytes_changed": 99.22222222222223
+    "avg_bytes_changed": 99.22222222222223,
+    "bot_edit_fraction": 0.0469
   },
   "kvwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 369.6666666666667
+    "avg_bytes_changed": 369.6666666666667,
+    "bot_edit_fraction": 0.0
   },
   "kawiktionary": {
     "edit_count": 76,
-    "avg_bytes_changed": 246.66666666666666
+    "avg_bytes_changed": 246.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "lbewiki": {
     "edit_count": 26,
-    "avg_bytes_changed": 101.85714285714286
+    "avg_bytes_changed": 101.85714285714286,
+    "bot_edit_fraction": 0.0769
   },
   "mdfwiki": {
     "edit_count": 10,
-    "avg_bytes_changed": 132.0
+    "avg_bytes_changed": 132.0,
+    "bot_edit_fraction": 0.0
   },
   "mhrwiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 751.0
+    "avg_bytes_changed": 751.0,
+    "bot_edit_fraction": 0.0
   },
   "mrjwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 264.0
+    "avg_bytes_changed": 264.0,
+    "bot_edit_fraction": 0.1667
   },
   "myvwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 135.57142857142858
+    "avg_bytes_changed": 135.57142857142858,
+    "bot_edit_fraction": 0.2727
   },
   "olowiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 380.5
+    "avg_bytes_changed": 380.5,
+    "bot_edit_fraction": 0.0
   },
   "tyvwiki": {
     "edit_count": 17,
-    "avg_bytes_changed": 134.9090909090909
+    "avg_bytes_changed": 134.9090909090909,
+    "bot_edit_fraction": 0.1176
   },
   "udmwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 761.0
+    "avg_bytes_changed": 761.0,
+    "bot_edit_fraction": 0.0
   },
   "xalwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 760.0
+    "avg_bytes_changed": 760.0,
+    "bot_edit_fraction": 0.0
   },
   "tewikisource": {
     "edit_count": 849,
-    "avg_bytes_changed": 91.13888888888889
+    "avg_bytes_changed": 91.13888888888889,
+    "bot_edit_fraction": 0.0
   },
   "ffwiki": {
     "edit_count": 230,
-    "avg_bytes_changed": 599.2897727272727
+    "avg_bytes_changed": 599.2897727272727,
+    "bot_edit_fraction": 0.0087
   },
   "lawikisource": {
     "edit_count": 157,
-    "avg_bytes_changed": 34774.944444444445
+    "avg_bytes_changed": 34774.944444444445,
+    "bot_edit_fraction": 0.0
   },
   "jawikisource": {
     "edit_count": 121,
-    "avg_bytes_changed": 154.53846153846155
+    "avg_bytes_changed": 154.53846153846155,
+    "bot_edit_fraction": 0.0
   },
   "mznwiki": {
     "edit_count": 94,
-    "avg_bytes_changed": 78.47058823529412
+    "avg_bytes_changed": 78.47058823529412,
+    "bot_edit_fraction": 0.1702
   },
   "arwikisource": {
     "edit_count": 476,
-    "avg_bytes_changed": 66.77011494252874
+    "avg_bytes_changed": 66.77011494252874,
+    "bot_edit_fraction": 0.0399
   },
   "zh_min_nanwiki": {
     "edit_count": 183,
-    "avg_bytes_changed": 129.01923076923077
+    "avg_bytes_changed": 129.01923076923077,
+    "bot_edit_fraction": 0.3279
   },
   "ukwikivoyage": {
     "edit_count": 4,
-    "avg_bytes_changed": 1989.75
+    "avg_bytes_changed": 1989.75,
+    "bot_edit_fraction": 0.0
   },
   "foundationwiki": {
     "edit_count": 92,
-    "avg_bytes_changed": 33.6875
+    "avg_bytes_changed": 33.6875,
+    "bot_edit_fraction": 0.0
   },
   "wikimaniawiki": {
     "edit_count": 466,
-    "avg_bytes_changed": 180.5569105691057
+    "avg_bytes_changed": 180.5569105691057,
+    "bot_edit_fraction": 0.2511
   },
   "zh_yuewiki": {
     "edit_count": 736,
-    "avg_bytes_changed": 374.32048192771083
+    "avg_bytes_changed": 374.32048192771083,
+    "bot_edit_fraction": 0.0516
   },
   "crhwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 225.66666666666666
+    "avg_bytes_changed": 225.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "ganwiki": {
     "edit_count": 45,
-    "avg_bytes_changed": -571.825
+    "avg_bytes_changed": -571.825,
+    "bot_edit_fraction": 0.0
   },
   "iuwiki": {
     "edit_count": 10,
-    "avg_bytes_changed": 227.0
+    "avg_bytes_changed": 227.0,
+    "bot_edit_fraction": 0.0
   },
   "mniwiki": {
     "edit_count": 31,
-    "avg_bytes_changed": 490.5
+    "avg_bytes_changed": 490.5,
+    "bot_edit_fraction": 0.0323
   },
   "omwiki": {
     "edit_count": 9,
-    "avg_bytes_changed": 998.4
+    "avg_bytes_changed": 998.4,
+    "bot_edit_fraction": 0.0
   },
   "shiwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 273.0
+    "avg_bytes_changed": 273.0,
+    "bot_edit_fraction": 0.0
   },
   "tlywiki": {
     "edit_count": 33,
-    "avg_bytes_changed": 23.653846153846153
+    "avg_bytes_changed": 23.653846153846153,
+    "bot_edit_fraction": 0.0
   },
   "wuuwiki": {
     "edit_count": 45,
-    "avg_bytes_changed": 119.13793103448276
+    "avg_bytes_changed": 119.13793103448276,
+    "bot_edit_fraction": 0.2889
   },
   "zghwiki": {
     "edit_count": 45,
-    "avg_bytes_changed": 312.45454545454544
+    "avg_bytes_changed": 312.45454545454544,
+    "bot_edit_fraction": 0.0444
   },
   "bnwiktionary": {
     "edit_count": 860,
-    "avg_bytes_changed": 144.77142857142857
+    "avg_bytes_changed": 144.77142857142857,
+    "bot_edit_fraction": 0.0
   },
   "bclwiki": {
     "edit_count": 120,
-    "avg_bytes_changed": 145.54794520547946
+    "avg_bytes_changed": 145.54794520547946,
+    "bot_edit_fraction": 0.3917
   },
   "ptwiktionary": {
     "edit_count": 636,
-    "avg_bytes_changed": 21.745098039215687
+    "avg_bytes_changed": 21.745098039215687,
+    "bot_edit_fraction": 0.0142
   },
   "zhwiktionary": {
     "edit_count": 10897,
-    "avg_bytes_changed": 99.75694444444444
+    "avg_bytes_changed": 99.75694444444444,
+    "bot_edit_fraction": 0.6391
   },
   "ilowiki": {
     "edit_count": 14,
-    "avg_bytes_changed": 195.33333333333334
+    "avg_bytes_changed": 195.33333333333334,
+    "bot_edit_fraction": 0.7143
   },
   "plwikiquote": {
     "edit_count": 50,
-    "avg_bytes_changed": 116.26315789473684
+    "avg_bytes_changed": 116.26315789473684,
+    "bot_edit_fraction": 0.0
   },
   "kwwiki": {
     "edit_count": 502,
-    "avg_bytes_changed": -0.7724867724867724
+    "avg_bytes_changed": -0.7724867724867724,
+    "bot_edit_fraction": 0.002
   },
   "ukwiktionary": {
     "edit_count": 63,
-    "avg_bytes_changed": 6.64
+    "avg_bytes_changed": 6.64,
+    "bot_edit_fraction": 0.0
   },
   "dewikivoyage": {
     "edit_count": 770,
-    "avg_bytes_changed": 143.14718614718615
+    "avg_bytes_changed": 143.14718614718615,
+    "bot_edit_fraction": 0.0
   },
   "cawiktionary": {
     "edit_count": 674,
-    "avg_bytes_changed": 18.946902654867255
+    "avg_bytes_changed": 18.946902654867255,
+    "bot_edit_fraction": 0.7003
   },
   "nds_nlwiki": {
     "edit_count": 43,
-    "avg_bytes_changed": 69.5625
+    "avg_bytes_changed": 69.5625,
+    "bot_edit_fraction": 0.0
   },
   "magwiki": {
     "edit_count": 1870,
-    "avg_bytes_changed": -22.785674314493566
+    "avg_bytes_changed": -22.785674314493566,
+    "bot_edit_fraction": 0.9342
   },
   "kshwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 145.33333333333334
+    "avg_bytes_changed": 145.33333333333334,
+    "bot_edit_fraction": 0.25
   },
   "knwiki": {
     "edit_count": 149,
-    "avg_bytes_changed": 186.69811320754718
+    "avg_bytes_changed": 186.69811320754718,
+    "bot_edit_fraction": 0.2215
   },
   "vlswiki": {
     "edit_count": 46,
-    "avg_bytes_changed": 77.08333333333333
+    "avg_bytes_changed": 77.08333333333333,
+    "bot_edit_fraction": 0.0
   },
   "vecwiki": {
     "edit_count": 70,
-    "avg_bytes_changed": 127.08333333333333
+    "avg_bytes_changed": 127.08333333333333,
+    "bot_edit_fraction": 0.3429
   },
   "eowikisource": {
     "edit_count": 104,
-    "avg_bytes_changed": 26.13888888888889
+    "avg_bytes_changed": 26.13888888888889,
+    "bot_edit_fraction": 0.0
   },
   "kiwiki": {
     "edit_count": 10,
-    "avg_bytes_changed": 376.5
+    "avg_bytes_changed": 376.5,
+    "bot_edit_fraction": 0.0
   },
   "plwikibooks": {
     "edit_count": 216,
-    "avg_bytes_changed": 142.88188976377953
+    "avg_bytes_changed": 142.88188976377953,
+    "bot_edit_fraction": 0.0
   },
   "plwikimedia": {
     "edit_count": 72,
-    "avg_bytes_changed": 554.8648648648649
+    "avg_bytes_changed": 554.8648648648649,
+    "bot_edit_fraction": 0.0
   },
   "furwiki": {
     "edit_count": 197,
-    "avg_bytes_changed": 178.88785046728972
+    "avg_bytes_changed": 178.88785046728972,
+    "bot_edit_fraction": 0.0
   },
   "ptwikibooks": {
     "edit_count": 9,
-    "avg_bytes_changed": 100.25
+    "avg_bytes_changed": 100.25,
+    "bot_edit_fraction": 0.5556
   },
   "guwiki": {
     "edit_count": 78,
-    "avg_bytes_changed": 181.94117647058823
+    "avg_bytes_changed": 181.94117647058823,
+    "bot_edit_fraction": 0.3462
   },
   "cebwiki": {
     "edit_count": 332,
-    "avg_bytes_changed": -19.83739837398374
+    "avg_bytes_changed": -19.83739837398374,
+    "bot_edit_fraction": 0.0512
   },
   "lfnwiki": {
     "edit_count": 13,
-    "avg_bytes_changed": 1698.5
+    "avg_bytes_changed": 1698.5,
+    "bot_edit_fraction": 0.0
   },
   "be_x_oldwiki": {
     "edit_count": 436,
-    "avg_bytes_changed": 107.48709677419355
+    "avg_bytes_changed": 107.48709677419355,
+    "bot_edit_fraction": 0.0344
   },
   "outreachwiki": {
     "edit_count": 10,
-    "avg_bytes_changed": 331.5
+    "avg_bytes_changed": 331.5,
+    "bot_edit_fraction": 0.0
   },
   "bewikisource": {
     "edit_count": 239,
-    "avg_bytes_changed": 111.625
+    "avg_bytes_changed": 111.625,
+    "bot_edit_fraction": 0.0
   },
   "wawiki": {
     "edit_count": 66,
-    "avg_bytes_changed": 131.75757575757575
+    "avg_bytes_changed": 131.75757575757575,
+    "bot_edit_fraction": 0.0
   },
   "hewikiquote": {
     "edit_count": 61,
-    "avg_bytes_changed": 131.06382978723406
+    "avg_bytes_changed": 131.06382978723406,
+    "bot_edit_fraction": 0.0
   },
   "cswikiquote": {
     "edit_count": 125,
-    "avg_bytes_changed": 145.75
+    "avg_bytes_changed": 145.75,
+    "bot_edit_fraction": 0.0
   },
   "arwikiquote": {
     "edit_count": 5,
-    "avg_bytes_changed": 149.8
+    "avg_bytes_changed": 149.8,
+    "bot_edit_fraction": 0.0
   },
   "sdwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 698.0
+    "avg_bytes_changed": 698.0,
+    "bot_edit_fraction": 0.0
   },
   "cswiktionary": {
     "edit_count": 89,
-    "avg_bytes_changed": 162.27777777777777
+    "avg_bytes_changed": 162.27777777777777,
+    "bot_edit_fraction": 0.0
   },
   "bdwikimedia": {
     "edit_count": 51,
-    "avg_bytes_changed": 473.2857142857143
+    "avg_bytes_changed": 473.2857142857143,
+    "bot_edit_fraction": 0.1961
   },
   "frwikiquote": {
     "edit_count": 21,
-    "avg_bytes_changed": 202.05882352941177
+    "avg_bytes_changed": 202.05882352941177,
+    "bot_edit_fraction": 0.1905
   },
   "ltwikiquote": {
     "edit_count": 14,
-    "avg_bytes_changed": 96.35714285714286
+    "avg_bytes_changed": 96.35714285714286,
+    "bot_edit_fraction": 0.0
   },
   "rskwiki": {
     "edit_count": 144,
-    "avg_bytes_changed": 141.91525423728814
+    "avg_bytes_changed": 141.91525423728814,
+    "bot_edit_fraction": 0.0
   },
   "nlwikisource": {
     "edit_count": 53,
-    "avg_bytes_changed": 435.375
+    "avg_bytes_changed": 435.375,
+    "bot_edit_fraction": 0.0
   },
   "eswikivoyage": {
     "edit_count": 25,
-    "avg_bytes_changed": 869.6111111111111
+    "avg_bytes_changed": 869.6111111111111,
+    "bot_edit_fraction": 0.48
   },
   "diqwiki": {
     "edit_count": 41,
-    "avg_bytes_changed": 146.88235294117646
+    "avg_bytes_changed": 146.88235294117646,
+    "bot_edit_fraction": 0.2683
   },
   "frrwiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 218.6
+    "avg_bytes_changed": 218.6,
+    "bot_edit_fraction": 0.5714
   },
   "alswiki": {
     "edit_count": 172,
-    "avg_bytes_changed": 34.111111111111114
+    "avg_bytes_changed": 34.111111111111114,
+    "bot_edit_fraction": 0.0116
   },
   "etwiktionary": {
     "edit_count": 61,
-    "avg_bytes_changed": 101.54166666666667
+    "avg_bytes_changed": 101.54166666666667,
+    "bot_edit_fraction": 0.0
   },
   "mgwiki": {
     "edit_count": 78,
-    "avg_bytes_changed": 391.91379310344826
+    "avg_bytes_changed": 391.91379310344826,
+    "bot_edit_fraction": 0.0385
   },
   "mwlwiki": {
     "edit_count": 74,
-    "avg_bytes_changed": -5.446153846153846
+    "avg_bytes_changed": -5.446153846153846,
+    "bot_edit_fraction": 0.0
   },
   "aswikiquote": {
     "edit_count": 25,
-    "avg_bytes_changed": 502.9375
+    "avg_bytes_changed": 502.9375,
+    "bot_edit_fraction": 0.0
   },
   "ukwikiquote": {
     "edit_count": 62,
-    "avg_bytes_changed": 1247.76
+    "avg_bytes_changed": 1247.76,
+    "bot_edit_fraction": 0.0
   },
   "hiwiktionary": {
     "edit_count": 13,
-    "avg_bytes_changed": 1029.25
+    "avg_bytes_changed": 1029.25,
+    "bot_edit_fraction": 0.0
   },
   "cvwiki": {
     "edit_count": 67,
-    "avg_bytes_changed": 408.1666666666667
+    "avg_bytes_changed": 408.1666666666667,
+    "bot_edit_fraction": 0.2687
   },
   "nowikiquote": {
     "edit_count": 4,
-    "avg_bytes_changed": 360.0
+    "avg_bytes_changed": 360.0,
+    "bot_edit_fraction": 0.0
   },
   "pcmwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 182.6
+    "avg_bytes_changed": 182.6,
+    "bot_edit_fraction": 0.0
   },
   "ptwikiquote": {
     "edit_count": 7,
-    "avg_bytes_changed": 116.5
+    "avg_bytes_changed": 116.5,
+    "bot_edit_fraction": 0.0
   },
   "awawiki": {
     "edit_count": 119,
-    "avg_bytes_changed": 635.2075471698113
+    "avg_bytes_changed": 635.2075471698113,
+    "bot_edit_fraction": 0.0252
   },
   "gdwiki": {
     "edit_count": 12,
-    "avg_bytes_changed": 102.8
+    "avg_bytes_changed": 102.8,
+    "bot_edit_fraction": 0.6667
   },
   "uzwiktionary": {
     "edit_count": 11,
-    "avg_bytes_changed": 96.77777777777777
+    "avg_bytes_changed": 96.77777777777777,
+    "bot_edit_fraction": 0.0
   },
   "rkiwiki": {
     "edit_count": 765,
-    "avg_bytes_changed": 112.16363636363636
+    "avg_bytes_changed": 112.16363636363636,
+    "bot_edit_fraction": 0.0
   },
   "nowikibooks": {
     "edit_count": 70,
-    "avg_bytes_changed": 266.241935483871
+    "avg_bytes_changed": 266.241935483871,
+    "bot_edit_fraction": 0.0
   },
   "wawiktionary": {
     "edit_count": 111,
-    "avg_bytes_changed": 220.9090909090909
+    "avg_bytes_changed": 220.9090909090909,
+    "bot_edit_fraction": 0.0
   },
   "ptwikisource": {
     "edit_count": 242,
-    "avg_bytes_changed": 157.72043010752688
+    "avg_bytes_changed": 157.72043010752688,
+    "bot_edit_fraction": 0.0
   },
   "fiwikisource": {
     "edit_count": 52,
-    "avg_bytes_changed": 125.1
+    "avg_bytes_changed": 125.1,
+    "bot_edit_fraction": 0.0
   },
   "tokwiki": {
     "edit_count": 75,
-    "avg_bytes_changed": 58.97435897435897
+    "avg_bytes_changed": 58.97435897435897,
+    "bot_edit_fraction": 0.12
   },
   "guwwiki": {
     "edit_count": 9,
-    "avg_bytes_changed": 250.0
+    "avg_bytes_changed": 250.0,
+    "bot_edit_fraction": 0.0
   },
   "dewikibooks": {
     "edit_count": 105,
-    "avg_bytes_changed": 683.0579710144928
+    "avg_bytes_changed": 683.0579710144928,
+    "bot_edit_fraction": 0.0095
   },
   "svwikisource": {
     "edit_count": 110,
-    "avg_bytes_changed": 81.1
+    "avg_bytes_changed": 81.1,
+    "bot_edit_fraction": 0.0
   },
   "lijwiki": {
     "edit_count": 52,
-    "avg_bytes_changed": 144.42424242424244
+    "avg_bytes_changed": 144.42424242424244,
+    "bot_edit_fraction": 0.0
   },
   "iowiki": {
     "edit_count": 172,
-    "avg_bytes_changed": 98.86363636363636
+    "avg_bytes_changed": 98.86363636363636,
+    "bot_edit_fraction": 0.0
   },
   "kgwiki": {
     "edit_count": 26,
-    "avg_bytes_changed": 155.63636363636363
+    "avg_bytes_changed": 155.63636363636363,
+    "bot_edit_fraction": 0.0385
   },
   "rowikibooks": {
     "edit_count": 5,
-    "avg_bytes_changed": 990.0
+    "avg_bytes_changed": 990.0,
+    "bot_edit_fraction": 0.0
   },
   "svwiktionary": {
     "edit_count": 214,
-    "avg_bytes_changed": 63.651685393258425
+    "avg_bytes_changed": 63.651685393258425,
+    "bot_edit_fraction": 0.0
   },
   "jbowiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 404.0
+    "avg_bytes_changed": 404.0,
+    "bot_edit_fraction": 0.0
   },
   "dvwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 171.0
+    "avg_bytes_changed": 171.0,
+    "bot_edit_fraction": 0.0
   },
   "trwikiquote": {
     "edit_count": 12,
-    "avg_bytes_changed": 387.2857142857143
+    "avg_bytes_changed": 387.2857142857143,
+    "bot_edit_fraction": 0.0
   },
   "chrwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 391.5
+    "avg_bytes_changed": 391.5,
+    "bot_edit_fraction": 0.0
   },
   "cawikisource": {
     "edit_count": 138,
-    "avg_bytes_changed": 69.66666666666667
+    "avg_bytes_changed": 69.66666666666667,
+    "bot_edit_fraction": 0.0
   },
   "cuwiki": {
     "edit_count": 13,
-    "avg_bytes_changed": 218.5
+    "avg_bytes_changed": 218.5,
+    "bot_edit_fraction": 0.0
   },
   "hsbwiki": {
     "edit_count": 17,
-    "avg_bytes_changed": 89.625
+    "avg_bytes_changed": 89.625,
+    "bot_edit_fraction": 0.0
   },
   "dsbwiki": {
     "edit_count": 19,
-    "avg_bytes_changed": 568.4615384615385
+    "avg_bytes_changed": 568.4615384615385,
+    "bot_edit_fraction": 0.1053
   },
   "tswiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 332.0
+    "avg_bytes_changed": 332.0,
+    "bot_edit_fraction": 0.0
   },
   "arwikiversity": {
     "edit_count": 5,
-    "avg_bytes_changed": 233.5
+    "avg_bytes_changed": 233.5,
+    "bot_edit_fraction": 0.0
   },
   "zh_classicalwiki": {
     "edit_count": 97,
-    "avg_bytes_changed": 5921.8
+    "avg_bytes_changed": 5921.8,
+    "bot_edit_fraction": 0.2887
   },
   "szywiki": {
     "edit_count": 24,
-    "avg_bytes_changed": 178.92857142857142
+    "avg_bytes_changed": 178.92857142857142,
+    "bot_edit_fraction": 0.0
   },
   "zhwikibooks": {
     "edit_count": 134,
-    "avg_bytes_changed": 135.8918918918919
+    "avg_bytes_changed": 135.8918918918919,
+    "bot_edit_fraction": 0.0896
   },
   "zhwikivoyage": {
     "edit_count": 24,
-    "avg_bytes_changed": 182.0
+    "avg_bytes_changed": 182.0,
+    "bot_edit_fraction": 0.375
   },
   "trvwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 1121.5
+    "avg_bytes_changed": 1121.5,
+    "bot_edit_fraction": 0.0
   },
   "taywiki": {
     "edit_count": 29,
-    "avg_bytes_changed": 84.27586206896552
+    "avg_bytes_changed": 84.27586206896552,
+    "bot_edit_fraction": 0.0
   },
   "pwnwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 1164.0
+    "avg_bytes_changed": 1164.0,
+    "bot_edit_fraction": 0.0
   },
   "amiwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 1126.0
+    "avg_bytes_changed": 1126.0,
+    "bot_edit_fraction": 0.0
   },
   "hakwiki": {
     "edit_count": 79,
-    "avg_bytes_changed": 321.22222222222223
+    "avg_bytes_changed": 321.22222222222223,
+    "bot_edit_fraction": 0.7722
   },
   "bxrwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 339.6666666666667
+    "avg_bytes_changed": 339.6666666666667,
+    "bot_edit_fraction": 0.5
   },
   "gdwiktionary": {
     "edit_count": 475,
-    "avg_bytes_changed": 3092.1666666666665
+    "avg_bytes_changed": 3092.1666666666665,
+    "bot_edit_fraction": 0.2505
   },
   "trwikisource": {
     "edit_count": 9,
-    "avg_bytes_changed": 136.875
+    "avg_bytes_changed": 136.875,
+    "bot_edit_fraction": 0.0
   },
   "uawikimedia": {
     "edit_count": 13,
-    "avg_bytes_changed": 2627.25
+    "avg_bytes_changed": 2627.25,
+    "bot_edit_fraction": 0.0
   },
   "trwikivoyage": {
     "edit_count": 3,
-    "avg_bytes_changed": 690.0
+    "avg_bytes_changed": 690.0,
+    "bot_edit_fraction": 0.0
   },
   "frwikibooks": {
     "edit_count": 177,
-    "avg_bytes_changed": 2443.6444444444446
+    "avg_bytes_changed": 2443.6444444444446,
+    "bot_edit_fraction": 0.0
   },
   "acewiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 110.5
+    "avg_bytes_changed": 110.5,
+    "bot_edit_fraction": 0.0
   },
   "barwiki": {
     "edit_count": 24,
-    "avg_bytes_changed": 314.2352941176471
+    "avg_bytes_changed": 314.2352941176471,
+    "bot_edit_fraction": 0.6667
   },
   "eewiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 362.0
+    "avg_bytes_changed": 362.0,
+    "bot_edit_fraction": 0.25
   },
   "frwikinews": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.3333
   },
   "frwikiversity": {
     "edit_count": 97,
-    "avg_bytes_changed": 426.4193548387097
+    "avg_bytes_changed": 426.4193548387097,
+    "bot_edit_fraction": 0.5567
   },
   "miwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 142.11111111111111
+    "avg_bytes_changed": 142.11111111111111,
+    "bot_edit_fraction": 0.7273
   },
   "betawikiversity": {
     "edit_count": 11,
-    "avg_bytes_changed": 462.2
+    "avg_bytes_changed": 462.2,
+    "bot_edit_fraction": 0.0
   },
   "wikimania2016wiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "frpwiki": {
     "edit_count": 15,
-    "avg_bytes_changed": 196.2
+    "avg_bytes_changed": 196.2,
+    "bot_edit_fraction": 0.0
   },
   "liwiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 173.0
+    "avg_bytes_changed": 173.0,
+    "bot_edit_fraction": 0.5714
   },
   "rmwiki": {
     "edit_count": 9,
-    "avg_bytes_changed": 159.75
+    "avg_bytes_changed": 159.75,
+    "bot_edit_fraction": 0.2222
   },
   "ruwikibooks": {
     "edit_count": 12,
-    "avg_bytes_changed": 229.0
+    "avg_bytes_changed": 229.0,
+    "bot_edit_fraction": 0.0
   },
   "warwiki": {
     "edit_count": 25,
-    "avg_bytes_changed": 175.41666666666666
+    "avg_bytes_changed": 175.41666666666666,
+    "bot_edit_fraction": 0.2
   },
   "kbdwiktionary": {
     "edit_count": 3,
-    "avg_bytes_changed": 213.0
+    "avg_bytes_changed": 213.0,
+    "bot_edit_fraction": 0.0
   },
   "euwikibooks": {
     "edit_count": 21,
-    "avg_bytes_changed": 139.14285714285714
+    "avg_bytes_changed": 139.14285714285714,
+    "bot_edit_fraction": 0.0
   },
   "nowikisource": {
     "edit_count": 568,
-    "avg_bytes_changed": 49.93939393939394
+    "avg_bytes_changed": 49.93939393939394,
+    "bot_edit_fraction": 0.831
   },
   "afwiktionary": {
     "edit_count": 160,
-    "avg_bytes_changed": 108.15
+    "avg_bytes_changed": 108.15,
+    "bot_edit_fraction": 0.0
   },
   "kabwiki": {
     "edit_count": 15,
-    "avg_bytes_changed": 433.84615384615387
+    "avg_bytes_changed": 433.84615384615387,
+    "bot_edit_fraction": 0.0
   },
   "brwikimedia": {
     "edit_count": 9,
-    "avg_bytes_changed": 151.0
+    "avg_bytes_changed": 151.0,
+    "bot_edit_fraction": 0.0
   },
   "tkwiki": {
     "edit_count": 10,
-    "avg_bytes_changed": -436.3333333333333
+    "avg_bytes_changed": -436.3333333333333,
+    "bot_edit_fraction": 0.2
   },
   "scwiki": {
     "edit_count": 31,
-    "avg_bytes_changed": 307.03846153846155
+    "avg_bytes_changed": 307.03846153846155,
+    "bot_edit_fraction": 0.4839
   },
   "sowiki": {
     "edit_count": 37,
-    "avg_bytes_changed": 169.4
+    "avg_bytes_changed": 169.4,
+    "bot_edit_fraction": 0.0
   },
   "aywiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 346.5
+    "avg_bytes_changed": 346.5,
+    "bot_edit_fraction": 0.0
   },
   "igwikiquote": {
     "edit_count": 29,
-    "avg_bytes_changed": 326.72727272727275
+    "avg_bytes_changed": 326.72727272727275,
+    "bot_edit_fraction": 0.0
   },
   "eswikiversity": {
     "edit_count": 9,
-    "avg_bytes_changed": 116.83333333333333
+    "avg_bytes_changed": 116.83333333333333,
+    "bot_edit_fraction": 0.2222
   },
   "etwikiquote": {
     "edit_count": 3,
-    "avg_bytes_changed": 269.6666666666667
+    "avg_bytes_changed": 269.6666666666667,
+    "bot_edit_fraction": 0.0
   },
   "skwiktionary": {
     "edit_count": 218,
-    "avg_bytes_changed": 787.35
+    "avg_bytes_changed": 787.35,
+    "bot_edit_fraction": 0.0
   },
   "satwiki": {
     "edit_count": 226,
-    "avg_bytes_changed": 375.88
+    "avg_bytes_changed": 375.88,
+    "bot_edit_fraction": 0.177
   },
   "glkwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 212.25
+    "avg_bytes_changed": 212.25,
+    "bot_edit_fraction": 0.0
   },
   "kowikisource": {
     "edit_count": 67,
-    "avg_bytes_changed": 1011.7083333333334
+    "avg_bytes_changed": 1011.7083333333334,
+    "bot_edit_fraction": 0.0149
   },
   "eswikibooks": {
     "edit_count": 83,
-    "avg_bytes_changed": 182.63636363636363
+    "avg_bytes_changed": 182.63636363636363,
+    "bot_edit_fraction": 0.0602
   },
   "pamwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 175.77777777777777
+    "avg_bytes_changed": 175.77777777777777,
+    "bot_edit_fraction": 0.9091
   },
   "mnwwiktionary": {
     "edit_count": 893,
-    "avg_bytes_changed": 717.6842105263158
+    "avg_bytes_changed": 717.6842105263158,
+    "bot_edit_fraction": 0.0034
   },
   "bjnwiktionary": {
     "edit_count": 673,
-    "avg_bytes_changed": 51.23809523809524
+    "avg_bytes_changed": 51.23809523809524,
+    "bot_edit_fraction": 0.0
   },
   "szlwiki": {
     "edit_count": 30,
-    "avg_bytes_changed": 94.15384615384616
+    "avg_bytes_changed": 94.15384615384616,
+    "bot_edit_fraction": 0.1333
   },
   "hywwiki": {
     "edit_count": 29,
-    "avg_bytes_changed": 1993.5454545454545
+    "avg_bytes_changed": 1993.5454545454545,
+    "bot_edit_fraction": 0.0
   },
   "idwikibooks": {
     "edit_count": 7,
-    "avg_bytes_changed": 373.2
+    "avg_bytes_changed": 373.2,
+    "bot_edit_fraction": 0.0
   },
   "iuwiktionary": {
     "edit_count": 25,
-    "avg_bytes_changed": 180.25
+    "avg_bytes_changed": 180.25,
+    "bot_edit_fraction": 0.0
   },
   "napwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 272.0
+    "avg_bytes_changed": 272.0,
+    "bot_edit_fraction": 0.25
   },
   "stwiki": {
     "edit_count": 15,
-    "avg_bytes_changed": 140.23076923076923
+    "avg_bytes_changed": 140.23076923076923,
+    "bot_edit_fraction": 0.4
   },
   "niawiktionary": {
     "edit_count": 156,
-    "avg_bytes_changed": 30.16176470588235
+    "avg_bytes_changed": 30.16176470588235,
+    "bot_edit_fraction": 0.0
   },
   "bbcwiki": {
     "edit_count": 8,
-    "avg_bytes_changed": 31.714285714285715
+    "avg_bytes_changed": 31.714285714285715,
+    "bot_edit_fraction": 0.5
   },
   "kncwiki": {
     "edit_count": 52,
-    "avg_bytes_changed": 104.53333333333333
+    "avg_bytes_changed": 104.53333333333333,
+    "bot_edit_fraction": 0.0
   },
   "smwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 229.75
+    "avg_bytes_changed": 229.75,
+    "bot_edit_fraction": 0.25
   },
   "shnwiktionary": {
     "edit_count": 4412,
-    "avg_bytes_changed": 128.18367346938774
+    "avg_bytes_changed": 128.18367346938774,
+    "bot_edit_fraction": 0.9062
   },
   "niawiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 126.66666666666667
+    "avg_bytes_changed": 126.66666666666667,
+    "bot_edit_fraction": 0.1429
   },
   "kcgwiki": {
     "edit_count": 50,
-    "avg_bytes_changed": 133.2608695652174
+    "avg_bytes_changed": 133.2608695652174,
+    "bot_edit_fraction": 0.0
   },
   "piwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 253.66666666666666
+    "avg_bytes_changed": 253.66666666666666,
+    "bot_edit_fraction": 0.25
   },
   "jamwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "sswiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 433.5
+    "avg_bytes_changed": 433.5,
+    "bot_edit_fraction": 0.5
   },
   "sewiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 171.6
+    "avg_bytes_changed": 171.6,
+    "bot_edit_fraction": 0.6667
   },
   "siwiki": {
     "edit_count": 81,
-    "avg_bytes_changed": 119.43478260869566
+    "avg_bytes_changed": 119.43478260869566,
+    "bot_edit_fraction": 0.3704
   },
   "kowiktionary": {
     "edit_count": 367,
-    "avg_bytes_changed": -109.19090909090909
+    "avg_bytes_changed": -109.19090909090909,
+    "bot_edit_fraction": 0.0
   },
   "idwikisource": {
     "edit_count": 1070,
-    "avg_bytes_changed": 97.14906832298136
+    "avg_bytes_changed": 97.14906832298136,
+    "bot_edit_fraction": 0.0
   },
   "eowiktionary": {
     "edit_count": 5255,
-    "avg_bytes_changed": 19.873015873015873
+    "avg_bytes_changed": 19.873015873015873,
+    "bot_edit_fraction": 0.2563
   },
   "jawikivoyage": {
     "edit_count": 160,
-    "avg_bytes_changed": 369.0344827586207
+    "avg_bytes_changed": 369.0344827586207,
+    "bot_edit_fraction": 0.0125
   },
   "iowiktionary": {
     "edit_count": 120,
-    "avg_bytes_changed": -143.1875
+    "avg_bytes_changed": -143.1875,
+    "bot_edit_fraction": 0.0
   },
   "blkwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 246.33333333333334
+    "avg_bytes_changed": 246.33333333333334,
+    "bot_edit_fraction": 0.1818
   },
   "eowikiquote": {
     "edit_count": 20,
-    "avg_bytes_changed": 114.0909090909091
+    "avg_bytes_changed": 114.0909090909091,
+    "bot_edit_fraction": 0.0
   },
   "kkwikibooks": {
     "edit_count": 2,
-    "avg_bytes_changed": 378.0
+    "avg_bytes_changed": 378.0,
+    "bot_edit_fraction": 0.0
   },
   "suwiktionary": {
     "edit_count": 9,
-    "avg_bytes_changed": 345.5
+    "avg_bytes_changed": 345.5,
+    "bot_edit_fraction": 0.0
   },
   "mlwikisource": {
     "edit_count": 56,
-    "avg_bytes_changed": 79.1304347826087
+    "avg_bytes_changed": 79.1304347826087,
+    "bot_edit_fraction": 0.0
   },
   "eswikiquote": {
     "edit_count": 100,
-    "avg_bytes_changed": 111.98039215686275
+    "avg_bytes_changed": 111.98039215686275,
+    "bot_edit_fraction": 0.01
   },
   "ibawiki": {
     "edit_count": 37,
-    "avg_bytes_changed": 8.0
+    "avg_bytes_changed": 8.0,
+    "bot_edit_fraction": 0.0
   },
   "huwikibooks": {
     "edit_count": 1250,
-    "avg_bytes_changed": 80.79166666666667
+    "avg_bytes_changed": 80.79166666666667,
+    "bot_edit_fraction": 0.0
   },
   "sahwiki": {
     "edit_count": 77,
-    "avg_bytes_changed": 388.8181818181818
+    "avg_bytes_changed": 388.8181818181818,
+    "bot_edit_fraction": 0.039
   },
   "sawiki": {
     "edit_count": 17,
-    "avg_bytes_changed": 362.90909090909093
+    "avg_bytes_changed": 362.90909090909093,
+    "bot_edit_fraction": 0.0588
   },
   "krcwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 382.0
+    "avg_bytes_changed": 382.0,
+    "bot_edit_fraction": 0.0
   },
   "cdowiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 243.33333333333334
+    "avg_bytes_changed": 243.33333333333334,
+    "bot_edit_fraction": 0.25
   },
   "dtpwiki": {
     "edit_count": 21,
-    "avg_bytes_changed": 63.0
+    "avg_bytes_changed": 63.0,
+    "bot_edit_fraction": 0.0
   },
   "gorwiki": {
     "edit_count": 107,
-    "avg_bytes_changed": 151.4591836734694
+    "avg_bytes_changed": 151.4591836734694,
+    "bot_edit_fraction": 0.0
   },
   "jawikibooks": {
     "edit_count": 72,
-    "avg_bytes_changed": 189.15384615384616
+    "avg_bytes_changed": 189.15384615384616,
+    "bot_edit_fraction": 0.0
   },
   "idwikimedia": {
     "edit_count": 14,
-    "avg_bytes_changed": 548.0714285714286
+    "avg_bytes_changed": 548.0714285714286,
+    "bot_edit_fraction": 0.0
   },
   "thwikibooks": {
     "edit_count": 5,
-    "avg_bytes_changed": 284.4
+    "avg_bytes_changed": 284.4,
+    "bot_edit_fraction": 0.0
   },
   "suwikisource": {
     "edit_count": 6,
-    "avg_bytes_changed": -303.3333333333333
+    "avg_bytes_changed": -303.3333333333333,
+    "bot_edit_fraction": 0.0
   },
   "nahwiki": {
     "edit_count": 154,
-    "avg_bytes_changed": -125.12121212121212
+    "avg_bytes_changed": -125.12121212121212,
+    "bot_edit_fraction": 0.0195
   },
   "astwiktionary": {
     "edit_count": 47,
-    "avg_bytes_changed": 569.6666666666666
+    "avg_bytes_changed": 569.6666666666666,
+    "bot_edit_fraction": 0.0
   },
   "kmwiki": {
     "edit_count": 66,
-    "avg_bytes_changed": 679.8709677419355
+    "avg_bytes_changed": 679.8709677419355,
+    "bot_edit_fraction": 0.0455
   },
   "dzwiki": {
     "edit_count": 15,
-    "avg_bytes_changed": 119.625
+    "avg_bytes_changed": 119.625,
+    "bot_edit_fraction": 0.0667
   },
   "viwikisource": {
     "edit_count": 14,
-    "avg_bytes_changed": 271.3333333333333
+    "avg_bytes_changed": 271.3333333333333,
+    "bot_edit_fraction": 0.0
   },
   "minwiki": {
     "edit_count": 117,
-    "avg_bytes_changed": 254.1122448979592
+    "avg_bytes_changed": 254.1122448979592,
+    "bot_edit_fraction": 0.1966
   },
   "fatwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 29.0
+    "avg_bytes_changed": 29.0,
+    "bot_edit_fraction": 0.3333
   },
   "zawiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 800.0
+    "avg_bytes_changed": 800.0,
+    "bot_edit_fraction": 0.0
   },
   "jawikiversity": {
     "edit_count": 17,
-    "avg_bytes_changed": 136.8
+    "avg_bytes_changed": 136.8,
+    "bot_edit_fraction": 0.0
   },
   "towiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 2.0
+    "avg_bytes_changed": 2.0,
+    "bot_edit_fraction": 0.75
   },
   "pnbwiki": {
     "edit_count": 199,
-    "avg_bytes_changed": 111.94117647058823
+    "avg_bytes_changed": 111.94117647058823,
+    "bot_edit_fraction": 0.1357
   },
   "skrwiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 175.33333333333334
+    "avg_bytes_changed": 175.33333333333334,
+    "bot_edit_fraction": 0.0
   },
   "nowiktionary": {
     "edit_count": 19,
-    "avg_bytes_changed": 336.6
+    "avg_bytes_changed": 336.6,
+    "bot_edit_fraction": 0.0
   },
   "bnwikivoyage": {
     "edit_count": 32,
-    "avg_bytes_changed": 1346.75
+    "avg_bytes_changed": 1346.75,
+    "bot_edit_fraction": 0.0
   },
   "pflwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 203.0
+    "avg_bytes_changed": 203.0,
+    "bot_edit_fraction": 0.0
   },
   "bowiki": {
     "edit_count": 10,
-    "avg_bytes_changed": 239.66666666666666
+    "avg_bytes_changed": 239.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "slwikiversity": {
     "edit_count": 28,
-    "avg_bytes_changed": 676.1153846153846
+    "avg_bytes_changed": 676.1153846153846,
+    "bot_edit_fraction": 0.0
   },
   "azwikibooks": {
     "edit_count": 42,
-    "avg_bytes_changed": 35.8
+    "avg_bytes_changed": 35.8,
+    "bot_edit_fraction": 0.0
   },
   "urwikisource": {
     "edit_count": 19,
-    "avg_bytes_changed": 29.90909090909091
+    "avg_bytes_changed": 29.90909090909091,
+    "bot_edit_fraction": 0.0
   },
   "zeawiki": {
     "edit_count": 106,
-    "avg_bytes_changed": 33.172413793103445
+    "avg_bytes_changed": 33.172413793103445,
+    "bot_edit_fraction": 0.0943
   },
   "fawikivoyage": {
     "edit_count": 2,
-    "avg_bytes_changed": 760.0
+    "avg_bytes_changed": 760.0,
+    "bot_edit_fraction": 0.0
   },
   "bugwiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 209.5
+    "avg_bytes_changed": 209.5,
+    "bot_edit_fraction": 0.0
   },
   "bewiktionary": {
     "edit_count": 4,
-    "avg_bytes_changed": 1133.5
+    "avg_bytes_changed": 1133.5,
+    "bot_edit_fraction": 0.0
   },
   "annwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "anpwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "arcwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 210.5
+    "avg_bytes_changed": 210.5,
+    "bot_edit_fraction": 0.0
   },
   "kaiwiki": {
     "edit_count": 8,
-    "avg_bytes_changed": -2.0
+    "avg_bytes_changed": -2.0,
+    "bot_edit_fraction": 0.0
   },
   "atjwiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 233.66666666666666
+    "avg_bytes_changed": 233.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "avwiki": {
     "edit_count": 11,
-    "avg_bytes_changed": -208.6
+    "avg_bytes_changed": -208.6,
+    "bot_edit_fraction": 0.0909
   },
   "avkwiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 232.0
+    "avg_bytes_changed": 232.0,
+    "bot_edit_fraction": 0.0
   },
   "dinwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "dtywiki": {
     "edit_count": 20,
-    "avg_bytes_changed": 309.42857142857144
+    "avg_bytes_changed": 309.42857142857144,
+    "bot_edit_fraction": 0.35
   },
   "liwiktionary": {
     "edit_count": 835,
-    "avg_bytes_changed": 169.80346820809248
+    "avg_bytes_changed": 169.80346820809248,
+    "bot_edit_fraction": 0.0
   },
   "kmwiktionary": {
     "edit_count": 5,
-    "avg_bytes_changed": 390.5
+    "avg_bytes_changed": 390.5,
+    "bot_edit_fraction": 0.0
   },
   "rmywiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "roa_rupwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 786.0
+    "avg_bytes_changed": 786.0,
+    "bot_edit_fraction": 0.0
   },
   "roa_tarawiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 687.0
+    "avg_bytes_changed": 687.0,
+    "bot_edit_fraction": 0.0
   },
   "nupwiki": {
     "edit_count": 23,
-    "avg_bytes_changed": 19.869565217391305
+    "avg_bytes_changed": 19.869565217391305,
+    "bot_edit_fraction": 0.0
   },
   "hywikisource": {
     "edit_count": 25,
-    "avg_bytes_changed": 543.76
+    "avg_bytes_changed": 543.76,
+    "bot_edit_fraction": 0.0
   },
   "eowikivoyage": {
     "edit_count": 8,
-    "avg_bytes_changed": -428.25
+    "avg_bytes_changed": -428.25,
+    "bot_edit_fraction": 0.0
   },
   "urwikiquote": {
     "edit_count": 4,
-    "avg_bytes_changed": 412.5
+    "avg_bytes_changed": 412.5,
+    "bot_edit_fraction": 0.0
   },
   "ugwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "mnwwiki": {
     "edit_count": 63,
-    "avg_bytes_changed": 230.6
+    "avg_bytes_changed": 230.6,
+    "bot_edit_fraction": 0.0
   },
   "vepwiki": {
     "edit_count": 19,
-    "avg_bytes_changed": 443.6666666666667
+    "avg_bytes_changed": 443.6666666666667,
+    "bot_edit_fraction": 0.0
   },
   "abstractwiki": {
     "edit_count": 92,
-    "avg_bytes_changed": 350.6231884057971
+    "avg_bytes_changed": 350.6231884057971,
+    "bot_edit_fraction": 0.0
   },
   "madwiktionary": {
     "edit_count": 21,
-    "avg_bytes_changed": 75.2
+    "avg_bytes_changed": 75.2,
+    "bot_edit_fraction": 0.0
   },
   "wowiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "xhwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "azwikiquote": {
     "edit_count": 10,
-    "avg_bytes_changed": 716.0
+    "avg_bytes_changed": 716.0,
+    "bot_edit_fraction": 0.0
   },
   "azwikisource": {
     "edit_count": 33,
-    "avg_bytes_changed": 169.8
+    "avg_bytes_changed": 169.8,
+    "bot_edit_fraction": 0.0
   },
   "idwikiquote": {
     "edit_count": 12,
-    "avg_bytes_changed": 334.625
+    "avg_bytes_changed": 334.625,
+    "bot_edit_fraction": 0.0
   },
   "bat_smgwiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 232.33333333333334
+    "avg_bytes_changed": 232.33333333333334,
+    "bot_edit_fraction": 0.0
   },
   "nlwikivoyage": {
     "edit_count": 11,
-    "avg_bytes_changed": 235.6
+    "avg_bytes_changed": 235.6,
+    "bot_edit_fraction": 0.0
   },
   "arwikibooks": {
     "edit_count": 9,
-    "avg_bytes_changed": -20.25
+    "avg_bytes_changed": -20.25,
+    "bot_edit_fraction": 0.0
   },
   "fonwiki": {
     "edit_count": 111,
-    "avg_bytes_changed": 57.137614678899084
+    "avg_bytes_changed": 57.137614678899084,
+    "bot_edit_fraction": 0.0
   },
   "itwikiversity": {
     "edit_count": 65,
-    "avg_bytes_changed": 34.53333333333333
+    "avg_bytes_changed": 34.53333333333333,
+    "bot_edit_fraction": 0.0
   },
   "fiwikibooks": {
     "edit_count": 3,
-    "avg_bytes_changed": 371.5
+    "avg_bytes_changed": 371.5,
+    "bot_edit_fraction": 0.0
   },
   "nlwikiquote": {
     "edit_count": 7,
-    "avg_bytes_changed": 361.75
+    "avg_bytes_changed": 361.75,
+    "bot_edit_fraction": 0.0
   },
   "maiwiki": {
     "edit_count": 6,
-    "avg_bytes_changed": 736.8
+    "avg_bytes_changed": 736.8,
+    "bot_edit_fraction": 0.0
   },
   "bdrwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "bewwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 22.0
+    "avg_bytes_changed": 22.0,
+    "bot_edit_fraction": 0.0
   },
   "igwiktionary": {
     "edit_count": 115,
-    "avg_bytes_changed": 112.28947368421052
+    "avg_bytes_changed": 112.28947368421052,
+    "bot_edit_fraction": 0.0
   },
   "biwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 228.0
+    "avg_bytes_changed": 228.0,
+    "bot_edit_fraction": 0.0
   },
   "bjnwiki": {
     "edit_count": 52,
-    "avg_bytes_changed": 137.5
+    "avg_bytes_changed": 137.5,
+    "bot_edit_fraction": 0.0
   },
   "bmwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 283.5
+    "avg_bytes_changed": 283.5,
+    "bot_edit_fraction": 0.0
   },
   "bpywiki": {
     "edit_count": 11,
-    "avg_bytes_changed": 966.875
+    "avg_bytes_changed": 966.875,
+    "bot_edit_fraction": 0.0
   },
   "btmwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "srwikisource": {
     "edit_count": 2,
-    "avg_bytes_changed": 363.0
+    "avg_bytes_changed": 363.0,
+    "bot_edit_fraction": 0.0
   },
   "cowiki": {
     "edit_count": 56,
-    "avg_bytes_changed": 114.56666666666666
+    "avg_bytes_changed": 114.56666666666666,
+    "bot_edit_fraction": 0.0
   },
   "vecwiktionary": {
     "edit_count": 12,
-    "avg_bytes_changed": 201.5
+    "avg_bytes_changed": 201.5,
+    "bot_edit_fraction": 0.0
   },
   "hifwiki": {
     "edit_count": 53,
-    "avg_bytes_changed": 709.0434782608696
+    "avg_bytes_changed": 709.0434782608696,
+    "bot_edit_fraction": 0.0
   },
   "shnwikivoyage": {
     "edit_count": 8,
-    "avg_bytes_changed": 255.75
+    "avg_bytes_changed": 255.75,
+    "bot_edit_fraction": 0.0
   },
   "mywiktionary": {
     "edit_count": 18,
-    "avg_bytes_changed": 8.857142857142858
+    "avg_bytes_changed": 8.857142857142858,
+    "bot_edit_fraction": 0.0
   },
   "gomwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 992.5
+    "avg_bytes_changed": 992.5,
+    "bot_edit_fraction": 0.0
   },
   "cawikimedia": {
     "edit_count": 14,
-    "avg_bytes_changed": 69.66666666666667
+    "avg_bytes_changed": 69.66666666666667,
+    "bot_edit_fraction": 0.2143
   },
   "sahwikisource": {
     "edit_count": 2,
-    "avg_bytes_changed": 377.5
+    "avg_bytes_changed": 377.5,
+    "bot_edit_fraction": 0.0
   },
   "hewikibooks": {
     "edit_count": 10,
-    "avg_bytes_changed": 203.625
+    "avg_bytes_changed": 203.625,
+    "bot_edit_fraction": 0.0
   },
   "pswikivoyage": {
     "edit_count": 3,
-    "avg_bytes_changed": 246.66666666666666
+    "avg_bytes_changed": 246.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "siwikibooks": {
     "edit_count": 7,
-    "avg_bytes_changed": 349.5
+    "avg_bytes_changed": 349.5,
+    "bot_edit_fraction": 0.0
   },
   "kowikinews": {
     "edit_count": 1,
-    "avg_bytes_changed": 28.0
+    "avg_bytes_changed": 28.0,
+    "bot_edit_fraction": 0.0
   },
   "bswikisource": {
     "edit_count": 2,
-    "avg_bytes_changed": 349.0
+    "avg_bytes_changed": 349.0,
+    "bot_edit_fraction": 0.0
   },
   "wawikisource": {
     "edit_count": 59,
-    "avg_bytes_changed": 54.95652173913044
+    "avg_bytes_changed": 54.95652173913044,
+    "bot_edit_fraction": 0.0
   },
   "svwikiversity": {
     "edit_count": 1,
-    "avg_bytes_changed": 0.0
+    "avg_bytes_changed": 0.0,
+    "bot_edit_fraction": 0.0
   },
   "fowiki": {
     "edit_count": 33,
-    "avg_bytes_changed": 77.54545454545455
+    "avg_bytes_changed": 77.54545454545455,
+    "bot_edit_fraction": 0.0
   },
   "oswiki": {
     "edit_count": 9,
-    "avg_bytes_changed": 378.5
+    "avg_bytes_changed": 378.5,
+    "bot_edit_fraction": 0.0
   },
   "gnwiki": {
     "edit_count": 64,
-    "avg_bytes_changed": 55.682539682539684
+    "avg_bytes_changed": 55.682539682539684,
+    "bot_edit_fraction": 0.9688
   },
   "cbk_zamwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 243.33333333333334
+    "avg_bytes_changed": 243.33333333333334,
+    "bot_edit_fraction": 0.0
   },
   "fawiktionary": {
     "edit_count": 6,
-    "avg_bytes_changed": 351.5
+    "avg_bytes_changed": 351.5,
+    "bot_edit_fraction": 0.0
   },
   "madwiki": {
     "edit_count": 22,
-    "avg_bytes_changed": 210.1
+    "avg_bytes_changed": 210.1,
+    "bot_edit_fraction": 0.0
   },
   "cawikibooks": {
     "edit_count": 2,
-    "avg_bytes_changed": 688.0
+    "avg_bytes_changed": 688.0,
+    "bot_edit_fraction": 0.0
   },
   "mswikisource": {
     "edit_count": 34,
-    "avg_bytes_changed": -74.5
+    "avg_bytes_changed": -74.5,
+    "bot_edit_fraction": 0.0
   },
   "sylwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 22.0
+    "avg_bytes_changed": 22.0,
+    "bot_edit_fraction": 0.25
   },
   "tddwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 22.0
+    "avg_bytes_changed": 22.0,
+    "bot_edit_fraction": 0.0
   },
   "tlwiktionary": {
     "edit_count": 76,
-    "avg_bytes_changed": 186.57142857142858
+    "avg_bytes_changed": 186.57142857142858,
+    "bot_edit_fraction": 0.0
   },
   "rowiktionary": {
     "edit_count": 88,
-    "avg_bytes_changed": 166.45454545454547
+    "avg_bytes_changed": 166.45454545454547,
+    "bot_edit_fraction": 0.0
   },
   "minwikisource": {
     "edit_count": 346,
-    "avg_bytes_changed": 30.55639097744361
+    "avg_bytes_changed": 30.55639097744361,
+    "bot_edit_fraction": 0.0
   },
   "orwikisource": {
     "edit_count": 5,
-    "avg_bytes_changed": 707.0
+    "avg_bytes_changed": 707.0,
+    "bot_edit_fraction": 0.0
   },
   "ckbwiktionary": {
     "edit_count": 5,
-    "avg_bytes_changed": 266.6666666666667
+    "avg_bytes_changed": 266.6666666666667,
+    "bot_edit_fraction": 0.0
   },
   "fiwikiquote": {
     "edit_count": 24,
-    "avg_bytes_changed": -243.13333333333333
+    "avg_bytes_changed": -243.13333333333333,
+    "bot_edit_fraction": 0.0417
   },
   "mrwikibooks": {
     "edit_count": 90,
-    "avg_bytes_changed": 108.76923076923077
+    "avg_bytes_changed": 108.76923076923077,
+    "bot_edit_fraction": 0.0333
   },
   "mlwikiquote": {
     "edit_count": 6,
-    "avg_bytes_changed": -262316.2
+    "avg_bytes_changed": -262316.2,
+    "bot_edit_fraction": 0.0
   },
   "bolwiki": {
     "edit_count": 27,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.6296
   },
   "elwikisource": {
     "edit_count": 4,
-    "avg_bytes_changed": 899.6666666666666
+    "avg_bytes_changed": 899.6666666666666,
+    "bot_edit_fraction": 0.0
   },
   "jvwiktionary": {
     "edit_count": 34,
-    "avg_bytes_changed": 114.0
+    "avg_bytes_changed": 114.0,
+    "bot_edit_fraction": 0.0
   },
   "kawikiquote": {
     "edit_count": 23,
-    "avg_bytes_changed": 152.43478260869566
+    "avg_bytes_changed": 152.43478260869566,
+    "bot_edit_fraction": 0.0
   },
   "iawikibooks": {
     "edit_count": 4,
-    "avg_bytes_changed": 366.0
+    "avg_bytes_changed": 366.0,
+    "bot_edit_fraction": 0.0
   },
   "ukwikibooks": {
     "edit_count": 2,
-    "avg_bytes_changed": 223.5
+    "avg_bytes_changed": 223.5,
+    "bot_edit_fraction": 0.0
   },
   "srwikiquote": {
     "edit_count": 8,
-    "avg_bytes_changed": 316.0
+    "avg_bytes_changed": 316.0,
+    "bot_edit_fraction": 0.0
   },
   "tetwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 376.5
+    "avg_bytes_changed": 376.5,
+    "bot_edit_fraction": 0.0
   },
   "cywiktionary": {
     "edit_count": 8,
-    "avg_bytes_changed": 200.0
+    "avg_bytes_changed": 200.0,
+    "bot_edit_fraction": 0.0
   },
   "rwwiktionary": {
     "edit_count": 108,
-    "avg_bytes_changed": 226.0
+    "avg_bytes_changed": 226.0,
+    "bot_edit_fraction": 0.0
   },
   "zuwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "diqwiktionary": {
     "edit_count": 222,
-    "avg_bytes_changed": 71.625
+    "avg_bytes_changed": 71.625,
+    "bot_edit_fraction": 0.0
   },
   "kswiktionary": {
     "edit_count": 3,
-    "avg_bytes_changed": 692.0
+    "avg_bytes_changed": 692.0,
+    "bot_edit_fraction": 0.0
   },
   "ptwikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "ltgwiki": {
     "edit_count": 15,
-    "avg_bytes_changed": 83.93333333333334
+    "avg_bytes_changed": 83.93333333333334,
+    "bot_edit_fraction": 0.8667
   },
   "stqwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 274.0
+    "avg_bytes_changed": 274.0,
+    "bot_edit_fraction": 0.3333
   },
   "map_bmswiki": {
     "edit_count": 13,
-    "avg_bytes_changed": 102.0
+    "avg_bytes_changed": 102.0,
+    "bot_edit_fraction": 0.1538
   },
   "svwikivoyage": {
     "edit_count": 8,
-    "avg_bytes_changed": 173.75
+    "avg_bytes_changed": 173.75,
+    "bot_edit_fraction": 0.0
   },
   "kkwiktionary": {
     "edit_count": 10,
-    "avg_bytes_changed": 1476.3333333333333
+    "avg_bytes_changed": 1476.3333333333333,
+    "bot_edit_fraction": 0.0
   },
   "pmswiki": {
     "edit_count": 29,
-    "avg_bytes_changed": 62.964285714285715
+    "avg_bytes_changed": 62.964285714285715,
+    "bot_edit_fraction": 0.8621
   },
   "mnwiktionary": {
     "edit_count": 12,
-    "avg_bytes_changed": 361.0
+    "avg_bytes_changed": 361.0,
+    "bot_edit_fraction": 0.0
   },
   "sewikimedia": {
     "edit_count": 4,
-    "avg_bytes_changed": 764.25
+    "avg_bytes_changed": 764.25,
+    "bot_edit_fraction": 0.0
   },
   "dawikibooks": {
     "edit_count": 4,
-    "avg_bytes_changed": 240.75
+    "avg_bytes_changed": 240.75,
+    "bot_edit_fraction": 0.0
   },
   "kowikiversity": {
     "edit_count": 2,
-    "avg_bytes_changed": 351.0
+    "avg_bytes_changed": 351.0,
+    "bot_edit_fraction": 0.0
   },
   "guwwikiquote": {
     "edit_count": 9,
-    "avg_bytes_changed": 144.25
+    "avg_bytes_changed": 144.25,
+    "bot_edit_fraction": 0.0
   },
   "scnwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 21.5
+    "avg_bytes_changed": 21.5,
+    "bot_edit_fraction": 0.3333
   },
   "idwikivoyage": {
     "edit_count": 32,
-    "avg_bytes_changed": 197.6315789473684
+    "avg_bytes_changed": 197.6315789473684,
+    "bot_edit_fraction": 0.0
   },
   "afwikibooks": {
     "edit_count": 2,
-    "avg_bytes_changed": 208.0
+    "avg_bytes_changed": 208.0,
+    "bot_edit_fraction": 0.0
   },
   "amwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 210.0
+    "avg_bytes_changed": 210.0,
+    "bot_edit_fraction": 0.0
   },
   "angwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 210.5
+    "avg_bytes_changed": 210.5,
+    "bot_edit_fraction": 0.0
   },
   "anwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": -261.0
+    "avg_bytes_changed": -261.0,
+    "bot_edit_fraction": 0.5
   },
   "nahwiktionary": {
     "edit_count": 128,
-    "avg_bytes_changed": -948.725
+    "avg_bytes_changed": -948.725,
+    "bot_edit_fraction": 0.0
   },
   "knwiktionary": {
     "edit_count": 14,
-    "avg_bytes_changed": 91.0
+    "avg_bytes_changed": 91.0,
+    "bot_edit_fraction": 0.0
   },
   "fawikiquote": {
     "edit_count": 5,
-    "avg_bytes_changed": 383.5
+    "avg_bytes_changed": 383.5,
+    "bot_edit_fraction": 0.0
   },
   "sawikisource": {
     "edit_count": 9,
-    "avg_bytes_changed": 5218.428571428572
+    "avg_bytes_changed": 5218.428571428572,
+    "bot_edit_fraction": 0.0
   },
   "liwikiquote": {
     "edit_count": 11,
-    "avg_bytes_changed": 229.66666666666666
+    "avg_bytes_changed": 229.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "smnwiki": {
     "edit_count": 5,
-    "avg_bytes_changed": 244.66666666666666
+    "avg_bytes_changed": 244.66666666666666,
+    "bot_edit_fraction": 0.0
   },
   "lawiktionary": {
     "edit_count": 32,
-    "avg_bytes_changed": 108.66666666666667
+    "avg_bytes_changed": 108.66666666666667,
+    "bot_edit_fraction": 0.0
   },
   "fawikibooks": {
     "edit_count": 10,
-    "avg_bytes_changed": 156.25
+    "avg_bytes_changed": 156.25,
+    "bot_edit_fraction": 0.0
   },
   "srwiktionary": {
     "edit_count": 39,
-    "avg_bytes_changed": 305.3333333333333
+    "avg_bytes_changed": 305.3333333333333,
+    "bot_edit_fraction": 0.0256
   },
   "viwikivoyage": {
     "edit_count": 44,
-    "avg_bytes_changed": 1340.56
+    "avg_bytes_changed": 1340.56,
+    "bot_edit_fraction": 0.0
   },
   "elwikivoyage": {
     "edit_count": 2,
-    "avg_bytes_changed": 741.0
+    "avg_bytes_changed": 741.0,
+    "bot_edit_fraction": 0.0
   },
   "lnwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 361.0
+    "avg_bytes_changed": 361.0,
+    "bot_edit_fraction": 0.0
   },
   "tewiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 356.5
+    "avg_bytes_changed": 356.5,
+    "bot_edit_fraction": 0.0
   },
   "pntwiki": {
     "edit_count": 90,
-    "avg_bytes_changed": 55.72222222222222
+    "avg_bytes_changed": 55.72222222222222,
+    "bot_edit_fraction": 0.0222
   },
   "mtwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": 110.0
+    "avg_bytes_changed": 110.0,
+    "bot_edit_fraction": 0.0
   },
   "shwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 421.0
+    "avg_bytes_changed": 421.0,
+    "bot_edit_fraction": 0.0
   },
   "rswikimedia": {
     "edit_count": 3,
-    "avg_bytes_changed": 777.3333333333334
+    "avg_bytes_changed": 777.3333333333334,
+    "bot_edit_fraction": 0.0
   },
   "napwikisource": {
     "edit_count": 17,
-    "avg_bytes_changed": 108.5
+    "avg_bytes_changed": 108.5,
+    "bot_edit_fraction": 0.0
   },
   "mlwiktionary": {
     "edit_count": 3,
-    "avg_bytes_changed": 283.0
+    "avg_bytes_changed": 283.0,
+    "bot_edit_fraction": 0.0
   },
   "hawwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 338.5
+    "avg_bytes_changed": 338.5,
+    "bot_edit_fraction": 0.0
   },
   "etwikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "fiwikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "ruwikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "cywikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "bgwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 758.0
+    "avg_bytes_changed": 758.0,
+    "bot_edit_fraction": 0.0
   },
   "cswikibooks": {
     "edit_count": 2,
-    "avg_bytes_changed": 386.0
+    "avg_bytes_changed": 386.0,
+    "bot_edit_fraction": 0.0
   },
   "mxwikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "cvwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 760.0
+    "avg_bytes_changed": 760.0,
+    "bot_edit_fraction": 0.0
   },
   "bswikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "bewikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "glwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "bawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 749.0
+    "avg_bytes_changed": 749.0,
+    "bot_edit_fraction": 0.0
   },
   "hywikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 686.0
+    "avg_bytes_changed": 686.0,
+    "bot_edit_fraction": 0.0
   },
   "itwikibooks": {
     "edit_count": 34,
-    "avg_bytes_changed": 339.57142857142856
+    "avg_bytes_changed": 339.57142857142856,
+    "bot_edit_fraction": 0.0
   },
   "knwikibooks": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "eowikibooks": {
     "edit_count": 4,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.75
   },
   "kywikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "mlwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "kuwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "fywikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 675.0
+    "avg_bytes_changed": 675.0,
+    "bot_edit_fraction": 0.0
   },
   "mswikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 697.0
+    "avg_bytes_changed": 697.0,
+    "bot_edit_fraction": 0.0
   },
   "kowikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 702.0
+    "avg_bytes_changed": 702.0,
+    "bot_edit_fraction": 0.0
   },
   "etwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 694.0
+    "avg_bytes_changed": 694.0,
+    "bot_edit_fraction": 0.0
   },
   "iswikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "mkwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 729.0
+    "avg_bytes_changed": 729.0,
+    "bot_edit_fraction": 0.0
   },
   "skwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "pawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 687.0
+    "avg_bytes_changed": 687.0,
+    "bot_edit_fraction": 0.0
   },
   "lawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "nlwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 690.0
+    "avg_bytes_changed": 690.0,
+    "bot_edit_fraction": 0.0
   },
   "elwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 888.0
+    "avg_bytes_changed": 888.0,
+    "bot_edit_fraction": 0.0
   },
   "nowikimedia": {
     "edit_count": 1,
-    "avg_bytes_changed": 675.0
+    "avg_bytes_changed": 675.0,
+    "bot_edit_fraction": 0.0
   },
   "slwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "svwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 695.0
+    "avg_bytes_changed": 695.0,
+    "bot_edit_fraction": 0.0
   },
   "kawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 823.0
+    "avg_bytes_changed": 823.0,
+    "bot_edit_fraction": 0.0
   },
   "mgwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "tlwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "hrwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "akwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "tgwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 798.0
+    "avg_bytes_changed": 798.0,
+    "bot_edit_fraction": 0.0
   },
   "liwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 689.0
+    "avg_bytes_changed": 689.0,
+    "bot_edit_fraction": 0.0
   },
   "tawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "sawikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 803.0
+    "avg_bytes_changed": 803.0,
+    "bot_edit_fraction": 0.0
   },
   "newikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 881.0
+    "avg_bytes_changed": 881.0,
+    "bot_edit_fraction": 0.0
   },
   "tewikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "ttwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 747.0
+    "avg_bytes_changed": 747.0,
+    "bot_edit_fraction": 0.0
   },
   "urwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 768.0
+    "avg_bytes_changed": 768.0,
+    "bot_edit_fraction": 0.0
   },
   "ocwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "srwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 726.0
+    "avg_bytes_changed": 726.0,
+    "bot_edit_fraction": 0.0
   },
   "crwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "ltwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "sqwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "chwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 781.0
+    "avg_bytes_changed": 781.0,
+    "bot_edit_fraction": 0.0
   },
   "fjwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "gagwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "gcrwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 692.0
+    "avg_bytes_changed": 692.0,
+    "bot_edit_fraction": 0.0
   },
   "fiu_vrowiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 696.0
+    "avg_bytes_changed": 696.0,
+    "bot_edit_fraction": 0.0
   },
   "chywiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 340.5
+    "avg_bytes_changed": 340.5,
+    "bot_edit_fraction": 0.0
   },
   "klwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "lezwiki": {
     "edit_count": 4,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.75
   },
   "kbdwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 349.0
+    "avg_bytes_changed": 349.0,
+    "bot_edit_fraction": 0.0
   },
   "kbpwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 704.0
+    "avg_bytes_changed": 704.0,
+    "bot_edit_fraction": 0.0
   },
   "ikwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 678.0
+    "avg_bytes_changed": 678.0,
+    "bot_edit_fraction": 0.0
   },
   "nawiki": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "nrmwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 592.0
+    "avg_bytes_changed": 592.0,
+    "bot_edit_fraction": 0.0
   },
   "nvwiki": {
     "edit_count": 3,
-    "avg_bytes_changed": 690.0
+    "avg_bytes_changed": 690.0,
+    "bot_edit_fraction": 0.0
   },
   "novwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "nqowiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 698.0
+    "avg_bytes_changed": 698.0,
+    "bot_edit_fraction": 0.0
   },
   "pagwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "pcdwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 696.0
+    "avg_bytes_changed": 696.0,
+    "bot_edit_fraction": 0.0
   },
   "nywiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 782.0
+    "avg_bytes_changed": 782.0,
+    "bot_edit_fraction": 0.0
   },
   "newwiki": {
     "edit_count": 7,
-    "avg_bytes_changed": 219.25
+    "avg_bytes_changed": 219.25,
+    "bot_edit_fraction": 0.4286
   },
   "pdcwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 506.0
+    "avg_bytes_changed": 506.0,
+    "bot_edit_fraction": 0.0
   },
   "srnwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 689.0
+    "avg_bytes_changed": 689.0,
+    "bot_edit_fraction": 0.0
   },
   "rnwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "snwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "twwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "cawikiquote": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "bewikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "tiwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 791.0
+    "avg_bytes_changed": 791.0,
+    "bot_edit_fraction": 0.0
   },
   "bgwikiquote": {
     "edit_count": 2,
-    "avg_bytes_changed": 378.5
+    "avg_bytes_changed": 378.5,
+    "bot_edit_fraction": 0.0
   },
   "sgwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 807.0
+    "avg_bytes_changed": 807.0,
+    "bot_edit_fraction": 0.0
   },
   "euwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 774.0
+    "avg_bytes_changed": 774.0,
+    "bot_edit_fraction": 0.0
   },
   "bclwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "hrwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "dawikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "brwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "bswikiquote": {
     "edit_count": 2,
-    "avg_bytes_changed": 378.0
+    "avg_bytes_changed": 378.0,
+    "bot_edit_fraction": 0.0
   },
   "huwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 715.0
+    "avg_bytes_changed": 715.0,
+    "bot_edit_fraction": 0.0
   },
   "glwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 701.0
+    "avg_bytes_changed": 701.0,
+    "bot_edit_fraction": 0.0
   },
   "elwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 892.0
+    "avg_bytes_changed": 892.0,
+    "bot_edit_fraction": 0.0
   },
   "afwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "hywikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 686.0
+    "avg_bytes_changed": 686.0,
+    "bot_edit_fraction": 0.0
   },
   "kuwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "lawikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "sahwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "rowikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 687.0
+    "avg_bytes_changed": 687.0,
+    "bot_edit_fraction": 0.0
   },
   "slwikiquote": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "kowikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 702.0
+    "avg_bytes_changed": 702.0,
+    "bot_edit_fraction": 0.0
   },
   "iswikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "sqwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 678.0
+    "avg_bytes_changed": 678.0,
+    "bot_edit_fraction": 0.0
   },
   "dewikiquote": {
     "edit_count": 5,
-    "avg_bytes_changed": 187.25
+    "avg_bytes_changed": 187.25,
+    "bot_edit_fraction": 0.0
   },
   "skwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "tywiki": {
     "edit_count": 1,
-    "avg_bytes_changed": 696.0
+    "avg_bytes_changed": 696.0,
+    "bot_edit_fraction": 0.0
   },
   "wowikiquote": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "thwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 693.0
+    "avg_bytes_changed": 693.0,
+    "bot_edit_fraction": 0.0
   },
   "viwikiquote": {
     "edit_count": 2,
-    "avg_bytes_changed": 730.0
+    "avg_bytes_changed": 730.0,
+    "bot_edit_fraction": 0.0
   },
   "tpiwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "guwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 707.0
+    "avg_bytes_changed": 707.0,
+    "bot_edit_fraction": 0.0
   },
   "svwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 695.0
+    "avg_bytes_changed": 695.0,
+    "bot_edit_fraction": 0.0
   },
   "sawikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 803.0
+    "avg_bytes_changed": 803.0,
+    "bot_edit_fraction": 0.0
   },
   "brwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "banwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 694.0
+    "avg_bytes_changed": 694.0,
+    "bot_edit_fraction": 0.0
   },
   "uzwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 778.0
+    "avg_bytes_changed": 778.0,
+    "bot_edit_fraction": 0.0
   },
   "tlwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "mrwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 773.0
+    "avg_bytes_changed": 773.0,
+    "bot_edit_fraction": 0.0
   },
   "jawikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 710.0
+    "avg_bytes_changed": 710.0,
+    "bot_edit_fraction": 0.0
   },
   "glwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "etwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 694.0
+    "avg_bytes_changed": 694.0,
+    "bot_edit_fraction": 0.0
   },
   "bgwikisource": {
     "edit_count": 14,
-    "avg_bytes_changed": 380.0
+    "avg_bytes_changed": 380.0,
+    "bot_edit_fraction": 0.0
   },
   "hrwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "euwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "knwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 704.0
+    "avg_bytes_changed": 704.0,
+    "bot_edit_fraction": 0.0
   },
   "nnwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 683.0
+    "avg_bytes_changed": 683.0,
+    "bot_edit_fraction": 0.0
   },
   "mkwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "huwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 715.0
+    "avg_bytes_changed": 715.0,
+    "bot_edit_fraction": 0.0
   },
   "tawikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "suwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 693.0
+    "avg_bytes_changed": 693.0,
+    "bot_edit_fraction": 0.0
   },
   "tewikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "jvwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 693.0
+    "avg_bytes_changed": 693.0,
+    "bot_edit_fraction": 0.0
   },
   "kywikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "cywikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "rowikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 688.0
+    "avg_bytes_changed": 688.0,
+    "bot_edit_fraction": 0.0
   },
   "slwikisource": {
     "edit_count": 3,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "skwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "ltwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "knwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 704.0
+    "avg_bytes_changed": 704.0,
+    "bot_edit_fraction": 0.0
   },
   "lijwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 683.0
+    "avg_bytes_changed": 683.0,
+    "bot_edit_fraction": 0.0
   },
   "fowikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "yiwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 717.0
+    "avg_bytes_changed": 717.0,
+    "bot_edit_fraction": 0.0
   },
   "tcywikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 710.0
+    "avg_bytes_changed": 710.0,
+    "bot_edit_fraction": 0.0
   },
   "vecwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "pmswikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "iswikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "liwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 689.0
+    "avg_bytes_changed": 689.0,
+    "bot_edit_fraction": 0.0
   },
   "ruwikiversity": {
     "edit_count": 1,
-    "avg_bytes_changed": 885.0
+    "avg_bytes_changed": 885.0,
+    "bot_edit_fraction": 0.0
   },
   "fiwikivoyage": {
     "edit_count": 1,
-    "avg_bytes_changed": 734.0
+    "avg_bytes_changed": 734.0,
+    "bot_edit_fraction": 0.0
   },
   "rowikivoyage": {
     "edit_count": 1,
-    "avg_bytes_changed": 688.0
+    "avg_bytes_changed": 688.0,
+    "bot_edit_fraction": 0.0
   },
   "hewikivoyage": {
     "edit_count": 1,
-    "avg_bytes_changed": 855.0
+    "avg_bytes_changed": 855.0,
+    "bot_edit_fraction": 0.0
   },
   "aywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "blkwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 724.0
+    "avg_bytes_changed": 724.0,
+    "bot_edit_fraction": 0.0
   },
   "azwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 716.0
+    "avg_bytes_changed": 716.0,
+    "bot_edit_fraction": 0.0
   },
   "ptwikivoyage": {
     "edit_count": 1,
-    "avg_bytes_changed": 697.0
+    "avg_bytes_changed": 697.0,
+    "bot_edit_fraction": 0.0
   },
   "btmwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 693.0
+    "avg_bytes_changed": 693.0,
+    "bot_edit_fraction": 0.0
   },
   "hiwikiversity": {
     "edit_count": 2,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 1.0
   },
   "chrwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "elwikiversity": {
     "edit_count": 2,
-    "avg_bytes_changed": 861.0
+    "avg_bytes_changed": 861.0,
+    "bot_edit_fraction": 0.0
   },
   "csbwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 692.0
+    "avg_bytes_changed": 692.0,
+    "bot_edit_fraction": 0.0
   },
   "bswiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "bgwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 758.0
+    "avg_bytes_changed": 758.0,
+    "bot_edit_fraction": 0.0
   },
   "euwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "gawiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "bclwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "gorwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 694.0
+    "avg_bytes_changed": 694.0,
+    "bot_edit_fraction": 0.0
   },
   "dawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "hiwikivoyage": {
     "edit_count": 1,
-    "avg_bytes_changed": 806.0
+    "avg_bytes_changed": 806.0,
+    "bot_edit_fraction": 0.0
   },
   "guwwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 343.5
+    "avg_bytes_changed": 343.5,
+    "bot_edit_fraction": 0.0
   },
   "zh_min_nanwikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": 804.0
+    "avg_bytes_changed": 804.0,
+    "bot_edit_fraction": 0.0
   },
   "fywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 675.0
+    "avg_bytes_changed": 675.0,
+    "bot_edit_fraction": 0.0
   },
   "hsbwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 508.0
+    "avg_bytes_changed": 508.0,
+    "bot_edit_fraction": 0.0
   },
   "cowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 786.0
+    "avg_bytes_changed": 786.0,
+    "bot_edit_fraction": 0.0
   },
   "hrwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "huwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 715.0
+    "avg_bytes_changed": 715.0,
+    "bot_edit_fraction": 0.0
   },
   "dvwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "kaawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 730.0
+    "avg_bytes_changed": 730.0,
+    "bot_edit_fraction": 0.0
   },
   "iawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 683.0
+    "avg_bytes_changed": 683.0,
+    "bot_edit_fraction": 0.0
   },
   "guwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 707.0
+    "avg_bytes_changed": 707.0,
+    "bot_edit_fraction": 0.0
   },
   "iewiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "hifwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "fiwikiversity": {
     "edit_count": 1,
-    "avg_bytes_changed": 733.0
+    "avg_bytes_changed": 733.0,
+    "bot_edit_fraction": 0.0
   },
   "kcgwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "gnwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "lbwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 702.0
+    "avg_bytes_changed": 702.0,
+    "bot_edit_fraction": 0.0
   },
   "lowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 713.0
+    "avg_bytes_changed": 713.0,
+    "bot_edit_fraction": 0.0
   },
   "jbowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 783.0
+    "avg_bytes_changed": 783.0,
+    "bot_edit_fraction": 0.0
   },
   "lmowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "fowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "iswiktionary": {
     "edit_count": 87,
-    "avg_bytes_changed": 405.1666666666667
+    "avg_bytes_changed": 405.1666666666667,
+    "bot_edit_fraction": 0.0
   },
   "nnwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.5
   },
   "hawiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 392.5
+    "avg_bytes_changed": 392.5,
+    "bot_edit_fraction": 0.0
   },
   "fjwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "hywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 686.0
+    "avg_bytes_changed": 686.0,
+    "bot_edit_fraction": 0.0
   },
   "minwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 792.0
+    "avg_bytes_changed": 792.0,
+    "bot_edit_fraction": 0.0
   },
   "orwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 707.0
+    "avg_bytes_changed": 707.0,
+    "bot_edit_fraction": 0.0
   },
   "pnbwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "mniwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 707.0
+    "avg_bytes_changed": 707.0,
+    "bot_edit_fraction": 0.0
   },
   "ltwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "ndswiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 507.0
+    "avg_bytes_changed": 507.0,
+    "bot_edit_fraction": 0.0
   },
   "omwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "pswiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 709.0
+    "avg_bytes_changed": 709.0,
+    "bot_edit_fraction": 0.0
   },
   "newiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 760.0
+    "avg_bytes_changed": 760.0,
+    "bot_edit_fraction": 0.0
   },
   "nawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 676.0
+    "avg_bytes_changed": 676.0,
+    "bot_edit_fraction": 0.0
   },
   "mrwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 773.0
+    "avg_bytes_changed": 773.0,
+    "bot_edit_fraction": 0.0
   },
   "lnwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 703.0
+    "avg_bytes_changed": 703.0,
+    "bot_edit_fraction": 0.0
   },
   "scnwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "sgwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 692.0
+    "avg_bytes_changed": 692.0,
+    "bot_edit_fraction": 0.0
   },
   "pawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 687.0
+    "avg_bytes_changed": 687.0,
+    "bot_edit_fraction": 0.0
   },
   "roa_rupwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 689.0
+    "avg_bytes_changed": 689.0,
+    "bot_edit_fraction": 0.0
   },
   "slwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "klwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 675.0
+    "avg_bytes_changed": 675.0,
+    "bot_edit_fraction": 0.0
   },
   "mkwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 729.0
+    "avg_bytes_changed": 729.0,
+    "bot_edit_fraction": 0.0
   },
   "shywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 692.0
+    "avg_bytes_changed": 692.0,
+    "bot_edit_fraction": 0.0
   },
   "smwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "sowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 704.0
+    "avg_bytes_changed": 704.0,
+    "bot_edit_fraction": 0.0
   },
   "tgwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "sawiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 803.0
+    "avg_bytes_changed": 803.0,
+    "bot_edit_fraction": 0.0
   },
   "mtwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "gvwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "tcywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 710.0
+    "avg_bytes_changed": 710.0,
+    "bot_edit_fraction": 0.0
   },
   "skrwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 694.0
+    "avg_bytes_changed": 694.0,
+    "bot_edit_fraction": 0.0
   },
   "kywiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "tkwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "lvwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 693.0
+    "avg_bytes_changed": 693.0,
+    "bot_edit_fraction": 0.0
   },
   "ttwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 747.0
+    "avg_bytes_changed": 747.0,
+    "bot_edit_fraction": 0.0
   },
   "kwwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "stwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "tiwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 681.0
+    "avg_bytes_changed": 681.0,
+    "bot_edit_fraction": 0.0
   },
   "tpiwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "quwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 790.0
+    "avg_bytes_changed": 790.0,
+    "bot_edit_fraction": 0.0
   },
   "tnwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 678.0
+    "avg_bytes_changed": 678.0,
+    "bot_edit_fraction": 0.0
   },
   "wowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 691.0
+    "avg_bytes_changed": 691.0,
+    "bot_edit_fraction": 0.0
   },
   "urwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 768.0
+    "avg_bytes_changed": 768.0,
+    "bot_edit_fraction": 0.0
   },
   "yuewiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 685.0
+    "avg_bytes_changed": 685.0,
+    "bot_edit_fraction": 0.0
   },
   "vowiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 679.0
+    "avg_bytes_changed": 679.0,
+    "bot_edit_fraction": 0.0
   },
   "gomwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 684.0
+    "avg_bytes_changed": 684.0,
+    "bot_edit_fraction": 0.0
   },
   "sqwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 677.0
+    "avg_bytes_changed": 677.0,
+    "bot_edit_fraction": 0.0
   },
   "tswiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "sswiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 680.0
+    "avg_bytes_changed": 680.0,
+    "bot_edit_fraction": 0.0
   },
   "miwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "ugwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 682.0
+    "avg_bytes_changed": 682.0,
+    "bot_edit_fraction": 0.0
   },
   "zh_min_nanwiktionary": {
     "edit_count": 1,
-    "avg_bytes_changed": 706.0
+    "avg_bytes_changed": 706.0,
+    "bot_edit_fraction": 0.0
   },
   "yiwiktionary": {
     "edit_count": 2,
-    "avg_bytes_changed": 859.0
+    "avg_bytes_changed": 859.0,
+    "bot_edit_fraction": 0.0
   },
   "kajwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "minwikibooks": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "minwikiquote": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "mywikisource": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "nrwiki": {
     "edit_count": 2,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "pplwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "shnwikinews": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "tigwiki": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   },
   "pcmwikiquote": {
     "edit_count": 2,
-    "avg_bytes_changed": -56.0
+    "avg_bytes_changed": -56.0,
+    "bot_edit_fraction": 0.0
   },
   "gewikimedia": {
     "edit_count": 12,
-    "avg_bytes_changed": 7.0
+    "avg_bytes_changed": 7.0,
+    "bot_edit_fraction": 0.0
   },
   "kawikisource": {
     "edit_count": 9,
-    "avg_bytes_changed": 99.0
+    "avg_bytes_changed": 99.0,
+    "bot_edit_fraction": 0.0
   },
   "gurwiki": {
     "edit_count": 27,
-    "avg_bytes_changed": 84.25
+    "avg_bytes_changed": 84.25,
+    "bot_edit_fraction": 0.0
   },
   "cswikivoyage": {
     "edit_count": 2,
-    "avg_bytes_changed": 31.5
+    "avg_bytes_changed": 31.5,
+    "bot_edit_fraction": 0.0
   },
   "ptwikinews": {
     "edit_count": 1,
-    "avg_bytes_changed": null
+    "avg_bytes_changed": null,
+    "bot_edit_fraction": 0.0
   }
 }
