@@ -3,17 +3,26 @@ Local serving/visualisation dashboard: merges the batch baseline
 (serving_layer/batch_baseline.json, produced by
 batch_layer/export_baseline_json.py) with the live speed layer view
 (speed_view_latest.json, continuously rewritten by
-speed_layer/speed_consumer.py) and serves it as an auto-refreshing
-HTML page.
+speed_layer/speed_consumer.py) into a single ranked "deviation from
+baseline" feed -- this is the actual Lambda-architecture insight the
+project answers, not just two raw numbers shown side by side.
 
-Layout: a summary row (edits in window, human vs. bot split, bot
-ratio) followed by two independently-ranked panels side by side --
-"Speed layer" (top wikis by live 5-min count) and "Batch layer" (top
-wikis by all-time count, plus average bytes changed per edit) -- each
-with its own bot% column. This is the same "current vs. baseline,
-batch and speed shown separately" merge as
-serving_layer/athena_setup.sql, just rendered visually instead of
-queried via SQL.
+How the deviation score works:
+  1. The batch layer gives each wiki's total edit count over the whole
+     archived time span (serving_layer/batch_baseline.json also stores
+     that span in minutes).
+  2. That's converted into an *expected* edit count per current
+     window (e.g. per 5 minutes) -- the wiki's normal, historical rate.
+  3. The speed layer gives the *actual* live count in the current
+     window.
+  4. deviation = actual / expected. A wiki running at 1.0x is exactly
+     normal; 3x means a real-time surge; 0.3x means unusually quiet.
+     Wikis with live activity but no batch history are flagged "NEW"
+     rather than given a misleading ratio.
+
+Rows are ranked by deviation (surging wikis first), which is what
+makes this a genuine anomaly/trend detector rather than a plain
+leaderboard.
 
 No external dependencies (stdlib only) -- deliberately simple so it's
 guaranteed to run for the demo without a pip install failing at the
@@ -33,13 +42,15 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 BATCH_BASELINE_PATH = "serving_layer/batch_baseline.json"
 SPEED_VIEW_PATH = "speed_view_latest.json"
-TOP_N = 12
+TOP_N = 20
+SURGE_THRESHOLD = 2.0
+QUIET_THRESHOLD = 0.5
 
 PAGE_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>WIKI-INSIGHTS</title>
+<title>Lambdascope</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -64,114 +75,92 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   .card .value { font-size: 28px; font-weight: 800; }
   .card .hint { font-size: 11px; color: #6f6889; margin-top: 4px; }
   .card.c1 { --accent: #a78bfa; } .card.c1 .value { color: #a78bfa; }
-  .card.c2 { --accent: #4ade80; } .card.c2 .value { color: #4ade80; }
-  .card.c3 { --accent: #fb7185; } .card.c3 .value { color: #fb7185; }
-  .card.c4 { --accent: #facc15; } .card.c4 .value { color: #facc15; }
+  .card.c2 { --accent: #fb7185; } .card.c2 .value { color: #fb7185; }
+  .card.c3 { --accent: #38bdf8; } .card.c3 .value { color: #38bdf8; }
+  .card.c4 { --accent: #4ade80; } .card.c4 .value { color: #4ade80; }
 
-  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  @media (max-width: 900px) { .panels { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, 1fr); } }
   .panel { background: #150e22; border-radius: 10px; overflow: hidden; }
   .panel-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; }
-  .panel-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
-  .panel.speed .panel-title { color: #a78bfa; }
-  .panel.batch .panel-title { color: #fb7185; }
-  .pill { font-size: 10px; padding: 3px 10px; border-radius: 999px; margin-left: 10px; font-weight: 600; }
-  .panel.speed .pill { background: rgba(167,139,250,0.15); color: #a78bfa; }
-  .panel.batch .pill { background: rgba(251,113,133,0.15); color: #fb7185; }
+  .panel-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; color: #a78bfa; }
+  .pill { font-size: 10px; padding: 3px 10px; border-radius: 999px; margin-left: 10px; font-weight: 600;
+    background: rgba(167,139,250,0.15); color: #a78bfa; }
   .panel-count { font-size: 11px; color: #6f6889; }
+  .legend { font-size: 11px; color: #6f6889; padding: 0 18px 14px; }
+  .legend span { margin-right: 14px; }
 
   table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; padding: 8px 18px; font-size: 13px; }
+  th, td { text-align: left; padding: 9px 18px; font-size: 13px; }
   th { color: #6f6889; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px;
     border-bottom: 1px solid #241a38; padding-bottom: 10px; }
   td.rank { color: #4a4462; width: 20px; }
   td.wiki { font-weight: 600; }
-  .bar-cell { position: relative; min-width: 130px; }
-  .bar-track { background: #1f1633; border-radius: 999px; height: 16px; position: relative; overflow: hidden; }
-  .panel.speed .bar-fill { background: linear-gradient(90deg, #7c3aed, #c4b5fd); }
-  .panel.batch .bar-fill { background: linear-gradient(90deg, #be123c, #fda4af); }
-  .bar-fill { height: 100%; border-radius: 999px; }
-  .bar-num { position: absolute; right: 10px; top: 0; bottom: 0; display: flex; align-items: center;
-    font-size: 11px; font-weight: 700; }
-  .bot-pct { font-size: 12px; font-weight: 600; }
-  .bot-low { color: #4ade80; } .bot-mid { color: #facc15; } .bot-high { color: #fb7185; }
-  .bytes-col { color: #8b83a3; font-size: 12px; }
+  td.num { color: #a89fc2; }
+  .deviation { font-weight: 700; font-size: 14px; }
+  .dev-surge { color: #fb7185; } .dev-normal { color: #a89fc2; } .dev-quiet { color: #38bdf8; } .dev-new { color: #facc15; }
+  .status-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 999px; letter-spacing: 0.5px; }
+  .badge-surge { background: rgba(251,113,133,0.15); color: #fb7185; }
+  .badge-normal { background: rgba(168,159,194,0.12); color: #a89fc2; }
+  .badge-quiet { background: rgba(56,189,248,0.15); color: #38bdf8; }
+  .badge-new { background: rgba(250,204,21,0.15); color: #facc15; }
   .empty { padding: 26px 18px; color: #6f6889; font-size: 13px; }
 </style>
 </head>
 <body>
   <header>
     <div class="brand-row">
-      <span class="brand">WIKI-INSIGHTS</span>
-      <span class="subtitle">real-time Wikipedia edit analytics -- batch + speed layers</span>
+      <span class="brand">LAMBDASCOPE</span>
+      <span class="subtitle">activity deviation detector -- live rate vs. historical baseline, per wiki</span>
     </div>
     <div class="status" id="status"><span class="live-dot"></span>connecting...</div>
   </header>
 
   <div class="cards" id="cards"></div>
 
-  <div class="panels">
-    <div class="panel speed">
-      <div class="panel-head">
-        <div><span class="panel-title">SPEED LAYER</span><span class="pill">live &middot; 5-min window</span></div>
-        <div class="panel-count" id="speed-count"></div>
-      </div>
-      <table>
-        <thead><tr><th></th><th>Wiki</th><th>Edits</th><th>Bot%</th></tr></thead>
-        <tbody id="speed-rows"></tbody>
-      </table>
+  <div class="panel">
+    <div class="panel-head">
+      <div><span class="panel-title">DEVIATION FEED</span><span class="pill" id="window-pill"></span></div>
+      <div class="panel-count" id="row-count"></div>
     </div>
-    <div class="panel batch">
-      <div class="panel-head">
-        <div><span class="panel-title">BATCH LAYER</span><span class="pill">all-time &middot; EMR/Spark</span></div>
-        <div class="panel-count" id="batch-count"></div>
-      </div>
-      <table>
-        <thead><tr><th></th><th>Wiki</th><th>Edits</th><th>Bot%</th><th>Avg &Delta;bytes</th></tr></thead>
-        <tbody id="batch-rows"></tbody>
-      </table>
+    <div class="legend">
+      <span class="dev-surge">&#9679; surge (&ge;2x baseline)</span>
+      <span class="dev-normal">&#9679; normal</span>
+      <span class="dev-quiet">&#9679; quiet (&le;0.5x baseline)</span>
+      <span class="dev-new">&#9679; new activity, no baseline yet</span>
     </div>
+    <table>
+      <thead><tr><th></th><th>Wiki</th><th>Live (window)</th><th>Expected (baseline)</th><th>Deviation</th><th>Status</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
   </div>
 
 <script>
-function botClass(pct) {
-  if (pct < 20) return 'bot-low';
-  if (pct < 60) return 'bot-mid';
-  return 'bot-high';
+function statusInfo(status) {
+  const map = {
+    SURGE:  { cls: 'dev-surge',  badge: 'badge-surge',  label: 'SURGE' },
+    NORMAL: { cls: 'dev-normal', badge: 'badge-normal', label: 'NORMAL' },
+    QUIET:  { cls: 'dev-quiet',  badge: 'badge-quiet',  label: 'QUIET' },
+    NEW:    { cls: 'dev-new',    badge: 'badge-new',    label: 'NEW' },
+  };
+  return map[status] || map.NORMAL;
 }
 
-function renderSpeedRows(rows, maxVal) {
-  const tbody = document.getElementById('speed-rows');
+function renderRows(rows) {
+  const tbody = document.getElementById('rows');
   if (rows.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="4" class="empty">no data yet</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="6" class="empty">no data yet</td></tr>';
     return;
   }
   tbody.innerHTML = rows.map((r, i) => {
-    const pct = maxVal > 0 ? (r.count / maxVal) * 100 : 0;
+    const info = statusInfo(r.status);
+    const expectedLabel = r.expected === null ? 'n/a' : r.expected.toFixed(1);
+    const devLabel = r.deviation === null ? '--' : r.deviation.toFixed(1) + 'x';
     return `<tr>
       <td class="rank">${i + 1}</td>
       <td class="wiki">${r.wiki}</td>
-      <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div><span class="bar-num">${r.count.toLocaleString()}</span></div></td>
-      <td class="bot-pct ${botClass(r.bot_pct)}">${r.bot_pct.toFixed(1)}%</td>
-    </tr>`;
-  }).join('');
-}
-
-function renderBatchRows(rows, maxVal) {
-  const tbody = document.getElementById('batch-rows');
-  if (rows.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="5" class="empty">no data yet</td></tr>';
-    return;
-  }
-  tbody.innerHTML = rows.map((r, i) => {
-    const pct = maxVal > 0 ? (r.count / maxVal) * 100 : 0;
-    const bytesLabel = r.avg_bytes_changed === null ? 'n/a' : r.avg_bytes_changed.toFixed(1);
-    return `<tr>
-      <td class="rank">${i + 1}</td>
-      <td class="wiki">${r.wiki}</td>
-      <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div><span class="bar-num">${r.count.toLocaleString()}</span></div></td>
-      <td class="bot-pct ${botClass(r.bot_pct)}">${r.bot_pct.toFixed(1)}%</td>
-      <td class="bytes-col">${bytesLabel}</td>
+      <td class="num">${r.live.toLocaleString()}</td>
+      <td class="num">${expectedLabel}</td>
+      <td class="deviation ${info.cls}">${devLabel}</td>
+      <td><span class="status-badge ${info.badge}">${info.label}</span></td>
     </tr>`;
   }).join('');
 }
@@ -182,22 +171,18 @@ async function refresh() {
 
   document.getElementById('status').innerHTML =
     `<span class="live-dot"></span>live &nbsp;|&nbsp; ${data.generated_at ? data.generated_at.split('.')[0].replace('T',' ') + ' UTC' : 'n/a'} &nbsp;|&nbsp; ${data.window_minutes}-min window`;
+  document.getElementById('window-pill').textContent = data.window_minutes + '-min window';
+  document.getElementById('row-count').textContent = data.rows.length + ' wikis tracked';
 
-  const t = data.totals;
+  const s = data.summary;
   document.getElementById('cards').innerHTML = `
-    <div class="card c1"><div class="label">Edits in window</div><div class="value">${t.edits_in_window.toLocaleString()}</div><div class="hint">last ${data.window_minutes} minutes</div></div>
-    <div class="card c2"><div class="label">Human edits</div><div class="value">${t.human_edits.toLocaleString()}</div><div class="hint">real editors</div></div>
-    <div class="card c3"><div class="label">Bot edits</div><div class="value">${t.bot_edits.toLocaleString()}</div><div class="hint">automated</div></div>
-    <div class="card c4"><div class="label">Bot ratio</div><div class="value">${t.bot_ratio_pct.toFixed(1)}%</div><div class="hint">of all edits</div></div>
+    <div class="card c1"><div class="label">Wikis tracked</div><div class="value">${s.total_wikis}</div><div class="hint">with live or historical data</div></div>
+    <div class="card c2"><div class="label">Surging</div><div class="value">${s.surge_count}</div><div class="hint">&ge;2x normal rate</div></div>
+    <div class="card c3"><div class="label">Quiet</div><div class="value">${s.quiet_count}</div><div class="hint">&le;0.5x normal rate</div></div>
+    <div class="card c4"><div class="label">New activity</div><div class="value">${s.new_count}</div><div class="hint">no baseline yet</div></div>
   `;
 
-  document.getElementById('speed-count').textContent = data.speed_rows.length + ' wikis';
-  document.getElementById('batch-count').textContent = data.batch_rows.length + ' wikis';
-
-  const speedMax = Math.max(1, ...data.speed_rows.map(r => r.count));
-  const batchMax = Math.max(1, ...data.batch_rows.map(r => r.count));
-  renderSpeedRows(data.speed_rows, speedMax);
-  renderBatchRows(data.batch_rows, batchMax);
+  renderRows(data.rows);
 }
 
 refresh();
@@ -218,43 +203,77 @@ def load_json(path, default):
             return default
 
 
+def classify(deviation):
+    if deviation is None:
+        return "NEW"
+    if deviation >= SURGE_THRESHOLD:
+        return "SURGE"
+    if deviation <= QUIET_THRESHOLD:
+        return "QUIET"
+    return "NORMAL"
+
+
 def build_merged_view(batch_path, speed_path):
-    batch = load_json(batch_path, {})
+    batch = load_json(batch_path, {"meta": {"span_minutes": None}, "wikis": {}})
     speed = load_json(speed_path, {
         "generated_at": None, "window_minutes": 5,
         "totals": {"edits_in_window": 0, "human_edits": 0, "bot_edits": 0, "bot_ratio_pct": 0.0},
         "wiki_stats": {},
     })
 
+    window_minutes = speed.get("window_minutes", 5)
+    span_minutes = batch.get("meta", {}).get("span_minutes")
+    batch_wikis = batch.get("wikis", {})
     wiki_stats = speed.get("wiki_stats", {})
-    speed_rows = []
-    for wiki, stats in wiki_stats.items():
-        count = stats.get("count", 0)
-        bot_count = stats.get("bot_count", 0)
-        bot_pct = (bot_count / count * 100) if count else 0.0
-        speed_rows.append({"wiki": wiki, "count": count, "bot_pct": bot_pct})
-    speed_rows.sort(key=lambda r: r["count"], reverse=True)
-    speed_rows = speed_rows[:TOP_N]
 
-    batch_rows = []
-    for wiki, stats in batch.items():
-        count = stats.get("edit_count", 0)
-        bot_pct = stats.get("bot_edit_fraction", 0.0) * 100
-        batch_rows.append({
+    all_wikis = set(batch_wikis.keys()) | set(wiki_stats.keys())
+
+    rows = []
+    for wiki in all_wikis:
+        live_count = wiki_stats.get(wiki, {}).get("count", 0)
+        batch_entry = batch_wikis.get(wiki)
+
+        expected = None
+        if batch_entry and span_minutes:
+            total_edits = batch_entry.get("edit_count", 0)
+            expected = total_edits * (window_minutes / span_minutes)
+
+        if expected is not None and expected > 0:
+            deviation = live_count / expected
+        elif expected is not None and expected == 0 and live_count == 0:
+            deviation = 1.0  # both zero -> treat as "normal" (nothing happening, as expected)
+        else:
+            deviation = None  # no usable baseline -> NEW
+
+        status = classify(deviation)
+        sort_key = deviation if deviation is not None else (float("inf") if live_count > 0 else -1)
+
+        rows.append({
             "wiki": wiki,
-            "count": count,
-            "bot_pct": bot_pct,
-            "avg_bytes_changed": stats.get("avg_bytes_changed"),
+            "live": live_count,
+            "expected": round(expected, 1) if expected is not None else None,
+            "deviation": round(deviation, 2) if deviation is not None else None,
+            "status": status,
+            "_sort_key": sort_key,
         })
-    batch_rows.sort(key=lambda r: r["count"], reverse=True)
-    batch_rows = batch_rows[:TOP_N]
+
+    rows.sort(key=lambda r: r["_sort_key"], reverse=True)
+    for r in rows:
+        del r["_sort_key"]
+    rows = rows[:TOP_N]
+
+    summary = {
+        "total_wikis": len(all_wikis),
+        "surge_count": sum(1 for r in rows if r["status"] == "SURGE"),
+        "quiet_count": sum(1 for r in rows if r["status"] == "QUIET"),
+        "new_count": sum(1 for r in rows if r["status"] == "NEW"),
+    }
 
     return {
         "generated_at": speed.get("generated_at"),
-        "window_minutes": speed.get("window_minutes", 5),
-        "totals": speed.get("totals", {"edits_in_window": 0, "human_edits": 0, "bot_edits": 0, "bot_ratio_pct": 0.0}),
-        "speed_rows": speed_rows,
-        "batch_rows": batch_rows,
+        "window_minutes": window_minutes,
+        "summary": summary,
+        "rows": rows,
     }
 
 
@@ -283,7 +302,7 @@ def make_handler(batch_path, speed_path):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Serve the local batch+speed dashboard.")
+    parser = argparse.ArgumentParser(description="Serve the local deviation-detection dashboard.")
     parser.add_argument("--batch-baseline", default=BATCH_BASELINE_PATH)
     parser.add_argument("--speed-view", default=SPEED_VIEW_PATH)
     parser.add_argument("--host", default="localhost", help="use 0.0.0.0 to accept connections from outside this machine (e.g. on EC2)")
