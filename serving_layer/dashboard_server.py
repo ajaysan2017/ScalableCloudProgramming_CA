@@ -9,11 +9,11 @@ HTML page.
 Layout: a summary row (edits in window, human vs. bot split, bot
 ratio) followed by two independently-ranked panels side by side --
 "Speed layer" (top wikis by live 5-min count) and "Batch layer" (top
-wikis by all-time count) -- each with its own bot% column. This is the
-same "current vs. baseline, batch and speed shown separately" merge as
+wikis by all-time count, plus average bytes changed per edit) -- each
+with its own bot% column. This is the same "current vs. baseline,
+batch and speed shown separately" merge as
 serving_layer/athena_setup.sql, just rendered visually instead of
-queried via SQL, with the bot-activity breakdown added since both
-layers already compute it.
+queried via SQL.
 
 No external dependencies (stdlib only) -- deliberately simple so it's
 guaranteed to run for the demo without a pip install failing at the
@@ -39,61 +39,72 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Wiki-Lambda Dashboard</title>
+<title>Lambdascope</title>
 <style>
   * { box-sizing: border-box; }
   body {
-    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
-    background: #0b0d10; color: #d7dbe0; margin: 0; padding: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #10091c; color: #e5e1f0; margin: 0; padding: 32px;
   }
-  header { display: flex; align-items: baseline; justify-content: space-between;
-    border-bottom: 1px solid #1e2228; padding-bottom: 16px; margin-bottom: 24px; flex-wrap: wrap; gap: 8px; }
-  .brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; color: #4fd1ff; }
-  .subtitle { font-size: 12px; color: #6b7280; margin-left: 12px; }
-  .status { font-size: 12px; color: #9aa4b2; display: flex; gap: 16px; align-items: center; }
-  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #34d399;
-    margin-right: 6px; box-shadow: 0 0 6px #34d399; }
+  header { display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 26px; flex-wrap: wrap; gap: 10px; }
+  .brand-row { display: flex; align-items: center; gap: 12px; }
+  .brand { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: #a78bfa; }
+  .subtitle { font-size: 13px; color: #8b83a3; font-weight: 400; }
+  .status { font-size: 12px; color: #a89fc2; display: flex; gap: 14px; align-items: center;
+    background: #1a1229; padding: 6px 14px; border-radius: 999px; }
+  .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
+    margin-right: 4px; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
-  .card { background: #12151a; border: 1px solid #1e2228; border-radius: 6px; padding: 14px 16px; }
-  .card .label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-  .card .value { font-size: 26px; font-weight: 700; }
-  .card .hint { font-size: 11px; color: #6b7280; margin-top: 4px; }
-  .c-cyan { color: #4fd1ff; } .c-green { color: #34d399; } .c-red { color: #f87171; } .c-purple { color: #c084fc; }
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+  .card { background: linear-gradient(160deg, #1a1229, #150e22); border-left: 3px solid var(--accent, #a78bfa);
+    border-radius: 10px; padding: 16px 18px; }
+  .card .label { font-size: 11px; color: #8b83a3; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+  .card .value { font-size: 28px; font-weight: 800; }
+  .card .hint { font-size: 11px; color: #6f6889; margin-top: 4px; }
+  .card.c1 { --accent: #a78bfa; } .card.c1 .value { color: #a78bfa; }
+  .card.c2 { --accent: #4ade80; } .card.c2 .value { color: #4ade80; }
+  .card.c3 { --accent: #fb7185; } .card.c3 .value { color: #fb7185; }
+  .card.c4 { --accent: #facc15; } .card.c4 .value { color: #facc15; }
 
-  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 900px) { .panels { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, 1fr); } }
-  .panel { background: #12151a; border: 1px solid #1e2228; border-radius: 6px; overflow: hidden; }
-  .panel-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px;
-    border-bottom: 1px solid #1e2228; }
-  .panel-title { font-size: 13px; font-weight: 700; letter-spacing: 1px; }
-  .panel.speed .panel-title { color: #4fd1ff; }
-  .panel.batch .panel-title { color: #fb923c; }
-  .badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; letter-spacing: 0.5px; }
-  .panel.speed .badge { background: rgba(79,209,255,0.12); color: #4fd1ff; }
-  .panel.batch .badge { background: rgba(251,146,60,0.12); color: #fb923c; }
-  .panel-count { font-size: 11px; color: #6b7280; }
+  .panel { background: #150e22; border-radius: 10px; overflow: hidden; }
+  .panel-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; }
+  .panel-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
+  .panel.speed .panel-title { color: #a78bfa; }
+  .panel.batch .panel-title { color: #fb7185; }
+  .pill { font-size: 10px; padding: 3px 10px; border-radius: 999px; margin-left: 10px; font-weight: 600; }
+  .panel.speed .pill { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .panel.batch .pill { background: rgba(251,113,133,0.15); color: #fb7185; }
+  .panel-count { font-size: 11px; color: #6f6889; }
 
   table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; padding: 7px 16px; font-size: 13px; border-bottom: 1px solid #171a1f; }
-  th { color: #6b7280; font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
-  td.rank { color: #4b5563; width: 24px; }
+  th, td { text-align: left; padding: 8px 18px; font-size: 13px; }
+  th { color: #6f6889; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px;
+    border-bottom: 1px solid #241a38; padding-bottom: 10px; }
+  td.rank { color: #4a4462; width: 20px; }
   td.wiki { font-weight: 600; }
-  .bar-cell { position: relative; min-width: 140px; }
-  .bar-track { background: #1a1e24; border-radius: 3px; height: 18px; position: relative; overflow: hidden; }
-  .panel.speed .bar-fill { background: linear-gradient(90deg, #0891b2, #4fd1ff); }
-  .panel.batch .bar-fill { background: linear-gradient(90deg, #c2410c, #fb923c); }
-  .bar-fill { height: 100%; border-radius: 3px; }
-  .bar-num { position: absolute; right: 8px; top: 0; bottom: 0; display: flex; align-items: center;
-    font-size: 12px; font-weight: 600; }
-  .bot-pct { font-size: 12px; }
-  .bot-low { color: #34d399; } .bot-mid { color: #fbbf24; } .bot-high { color: #f87171; }
-  .empty { padding: 24px 16px; color: #6b7280; font-size: 13px; }
+  .bar-cell { position: relative; min-width: 130px; }
+  .bar-track { background: #1f1633; border-radius: 999px; height: 16px; position: relative; overflow: hidden; }
+  .panel.speed .bar-fill { background: linear-gradient(90deg, #7c3aed, #c4b5fd); }
+  .panel.batch .bar-fill { background: linear-gradient(90deg, #be123c, #fda4af); }
+  .bar-fill { height: 100%; border-radius: 999px; }
+  .bar-num { position: absolute; right: 10px; top: 0; bottom: 0; display: flex; align-items: center;
+    font-size: 11px; font-weight: 700; }
+  .bot-pct { font-size: 12px; font-weight: 600; }
+  .bot-low { color: #4ade80; } .bot-mid { color: #facc15; } .bot-high { color: #fb7185; }
+  .bytes-col { color: #8b83a3; font-size: 12px; }
+  .empty { padding: 26px 18px; color: #6f6889; font-size: 13px; }
 </style>
 </head>
 <body>
   <header>
-    <div><span class="brand">WIKI-LAMBDA</span><span class="subtitle">Lambda Architecture -- Scalable Cloud Programming CA</span></div>
+    <div class="brand-row">
+      <span class="brand">LAMBDASCOPE</span>
+      <span class="subtitle">real-time Wikipedia edit analytics -- batch + speed layers</span>
+    </div>
     <div class="status" id="status"><span class="live-dot"></span>connecting...</div>
   </header>
 
@@ -102,7 +113,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <div class="panels">
     <div class="panel speed">
       <div class="panel-head">
-        <div><span class="panel-title">SPEED LAYER</span><span class="badge">LIVE - 5-MIN WINDOW</span></div>
+        <div><span class="panel-title">SPEED LAYER</span><span class="pill">live &middot; 5-min window</span></div>
         <div class="panel-count" id="speed-count"></div>
       </div>
       <table>
@@ -112,11 +123,11 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     </div>
     <div class="panel batch">
       <div class="panel-head">
-        <div><span class="panel-title">BATCH LAYER</span><span class="badge">ALL-TIME - EMR/SPARK</span></div>
+        <div><span class="panel-title">BATCH LAYER</span><span class="pill">all-time &middot; EMR/Spark</span></div>
         <div class="panel-count" id="batch-count"></div>
       </div>
       <table>
-        <thead><tr><th></th><th>Wiki</th><th>Edits</th><th>Bot%</th></tr></thead>
+        <thead><tr><th></th><th>Wiki</th><th>Edits</th><th>Bot%</th><th>Avg &Delta;bytes</th></tr></thead>
         <tbody id="batch-rows"></tbody>
       </table>
     </div>
@@ -129,8 +140,8 @@ function botClass(pct) {
   return 'bot-high';
 }
 
-function renderRows(tbodyId, rows, maxVal, panelClass) {
-  const tbody = document.getElementById(tbodyId);
+function renderSpeedRows(rows, maxVal) {
+  const tbody = document.getElementById('speed-rows');
   if (rows.length === 0) {
     tbody.innerHTML = '<tr><td colspan="4" class="empty">no data yet</td></tr>';
     return;
@@ -146,19 +157,38 @@ function renderRows(tbodyId, rows, maxVal, panelClass) {
   }).join('');
 }
 
+function renderBatchRows(rows, maxVal) {
+  const tbody = document.getElementById('batch-rows');
+  if (rows.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="5" class="empty">no data yet</td></tr>';
+    return;
+  }
+  tbody.innerHTML = rows.map((r, i) => {
+    const pct = maxVal > 0 ? (r.count / maxVal) * 100 : 0;
+    const bytesLabel = r.avg_bytes_changed === null ? 'n/a' : r.avg_bytes_changed.toFixed(1);
+    return `<tr>
+      <td class="rank">${i + 1}</td>
+      <td class="wiki">${r.wiki}</td>
+      <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div><span class="bar-num">${r.count.toLocaleString()}</span></div></td>
+      <td class="bot-pct ${botClass(r.bot_pct)}">${r.bot_pct.toFixed(1)}%</td>
+      <td class="bytes-col">${bytesLabel}</td>
+    </tr>`;
+  }).join('');
+}
+
 async function refresh() {
   const resp = await fetch('/api/merged');
   const data = await resp.json();
 
   document.getElementById('status').innerHTML =
-    `<span class="live-dot"></span>LIVE &nbsp;|&nbsp; Updated: ${data.generated_at ? data.generated_at.split('.')[0].replace('T',' ') + ' UTC' : 'n/a'} &nbsp;|&nbsp; Window: ${data.window_minutes} min`;
+    `<span class="live-dot"></span>live &nbsp;|&nbsp; ${data.generated_at ? data.generated_at.split('.')[0].replace('T',' ') + ' UTC' : 'n/a'} &nbsp;|&nbsp; ${data.window_minutes}-min window`;
 
   const t = data.totals;
   document.getElementById('cards').innerHTML = `
-    <div class="card"><div class="label">Edits in window</div><div class="value c-cyan">${t.edits_in_window.toLocaleString()}</div><div class="hint">last ${data.window_minutes} minutes</div></div>
-    <div class="card"><div class="label">Human edits</div><div class="value c-green">${t.human_edits.toLocaleString()}</div><div class="hint">real editors</div></div>
-    <div class="card"><div class="label">Bot edits</div><div class="value c-red">${t.bot_edits.toLocaleString()}</div><div class="hint">automated</div></div>
-    <div class="card"><div class="label">Bot ratio</div><div class="value c-purple">${t.bot_ratio_pct.toFixed(1)}%</div><div class="hint">of all edits</div></div>
+    <div class="card c1"><div class="label">Edits in window</div><div class="value">${t.edits_in_window.toLocaleString()}</div><div class="hint">last ${data.window_minutes} minutes</div></div>
+    <div class="card c2"><div class="label">Human edits</div><div class="value">${t.human_edits.toLocaleString()}</div><div class="hint">real editors</div></div>
+    <div class="card c3"><div class="label">Bot edits</div><div class="value">${t.bot_edits.toLocaleString()}</div><div class="hint">automated</div></div>
+    <div class="card c4"><div class="label">Bot ratio</div><div class="value">${t.bot_ratio_pct.toFixed(1)}%</div><div class="hint">of all edits</div></div>
   `;
 
   document.getElementById('speed-count').textContent = data.speed_rows.length + ' wikis';
@@ -166,8 +196,8 @@ async function refresh() {
 
   const speedMax = Math.max(1, ...data.speed_rows.map(r => r.count));
   const batchMax = Math.max(1, ...data.batch_rows.map(r => r.count));
-  renderRows('speed-rows', data.speed_rows, speedMax, 'speed');
-  renderRows('batch-rows', data.batch_rows, batchMax, 'batch');
+  renderSpeedRows(data.speed_rows, speedMax);
+  renderBatchRows(data.batch_rows, batchMax);
 }
 
 refresh();
@@ -210,7 +240,12 @@ def build_merged_view(batch_path, speed_path):
     for wiki, stats in batch.items():
         count = stats.get("edit_count", 0)
         bot_pct = stats.get("bot_edit_fraction", 0.0) * 100
-        batch_rows.append({"wiki": wiki, "count": count, "bot_pct": bot_pct})
+        batch_rows.append({
+            "wiki": wiki,
+            "count": count,
+            "bot_pct": bot_pct,
+            "avg_bytes_changed": stats.get("avg_bytes_changed"),
+        })
     batch_rows.sort(key=lambda r: r["count"], reverse=True)
     batch_rows = batch_rows[:TOP_N]
 
