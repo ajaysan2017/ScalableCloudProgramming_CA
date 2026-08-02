@@ -27,7 +27,17 @@ pointed at the same archive file:
 
 import argparse
 import json
+import time
 from collections import defaultdict
+
+# Sanity bounds for event timestamps, used to reject corrupt/outlier
+# records before they get used to compute the archive's time span.
+# A single bad timestamp (e.g. from a malformed stream event) can
+# otherwise blow up min()/max() to a value years off, which silently
+# wrecks the "expected edits per window" calculation for every wiki
+# (division by a near-zero span produces absurd deviation multipliers).
+MIN_VALID_TIME_MS = 1577836800000  # 2020-01-01, well before this project
+MAX_VALID_TIME_MS = int(time.time() * 1000) + 86400000  # now + 1 day buffer
 
 
 def main():
@@ -61,7 +71,7 @@ def main():
                 bot_counts[wiki] += 1
 
             t = record.get("time_ms")
-            if t is not None:
+            if t is not None and MIN_VALID_TIME_MS <= t <= MAX_VALID_TIME_MS:
                 if min_time_ms is None or t < min_time_ms:
                     min_time_ms = t
                 if max_time_ms is None or t > max_time_ms:
