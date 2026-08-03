@@ -260,14 +260,21 @@ def build_merged_view(batch_path, speed_path):
     rows.sort(key=lambda r: r["_sort_key"], reverse=True)
     for r in rows:
         del r["_sort_key"]
-    rows = rows[:TOP_N]
 
+    # Compute the summary cards over ALL wikis, not just the top-N shown
+    # in the table below. The table is sorted by deviation descending
+    # (surging wikis first) and truncated to TOP_N, so counting status
+    # after truncation would silently exclude QUIET/NEW wikis -- they
+    # sort toward the bottom and rarely survive the cut, making those
+    # cards look permanently stuck at 0 even when such wikis exist.
     summary = {
         "total_wikis": len(all_wikis),
         "surge_count": sum(1 for r in rows if r["status"] == "SURGE"),
         "quiet_count": sum(1 for r in rows if r["status"] == "QUIET"),
         "new_count": sum(1 for r in rows if r["status"] == "NEW"),
     }
+
+    rows = rows[:TOP_N]
 
     return {
         "generated_at": speed.get("generated_at"),
