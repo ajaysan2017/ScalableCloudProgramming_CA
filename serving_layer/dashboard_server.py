@@ -42,7 +42,10 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 BATCH_BASELINE_PATH = "serving_layer/batch_baseline.json"
 SPEED_VIEW_PATH = "speed_view_latest.json"
-TOP_N = 20
+# Set to an int to cap the number of rows returned/rendered; None shows
+# every tracked wiki (there are ~800+, which a plain HTML table handles
+# fine -- no pagination/virtualisation needed for a demo).
+TOP_N = None
 SURGE_THRESHOLD = 2.0
 QUIET_THRESHOLD = 0.5
 
@@ -107,6 +110,15 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   .legend { font-size: 11px; color: #6f6889; padding: 0 18px 14px; }
   .legend span { margin-right: 14px; }
 
+  .filter-bar { display: flex; gap: 8px; padding: 0 18px 14px; flex-wrap: wrap; align-items: center; }
+  .filter-btn { font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 999px;
+    border: 1px solid #241a38; background: #1a1229; color: #a89fc2; cursor: pointer; }
+  .filter-btn:hover { border-color: #a78bfa; }
+  .filter-btn.active { background: rgba(167,139,250,0.18); color: #a78bfa; border-color: #a78bfa; }
+  .search-box { margin-left: auto; font-size: 12px; background: #1a1229; border: 1px solid #241a38;
+    color: #e5e1f0; padding: 6px 12px; border-radius: 999px; outline: none; min-width: 200px; }
+  .search-box::placeholder { color: #6f6889; }
+
   table { width: 100%; border-collapse: collapse; }
   th, td { text-align: left; padding: 9px 18px; font-size: 13px; }
   th { color: #6f6889; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px;
@@ -149,6 +161,15 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       <span class="dev-new">&#9679; new activity, no baseline yet</span>
       <span class="dev-lowdata">&#9679; low-data (baseline too small to trust a ratio)</span>
     </div>
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-status="ALL">All</button>
+      <button class="filter-btn" data-status="SURGE">Surge</button>
+      <button class="filter-btn" data-status="NORMAL">Normal</button>
+      <button class="filter-btn" data-status="QUIET">Quiet</button>
+      <button class="filter-btn" data-status="NEW">New</button>
+      <button class="filter-btn" data-status="LOW-DATA">Low-data</button>
+      <input class="search-box" id="search-input" type="text" placeholder="Search wiki...">
+    </div>
     <table>
       <thead><tr><th></th><th>Wiki</th><th>Live (window)</th><th>Expected (baseline)</th><th>Deviation</th><th>Status</th></tr></thead>
       <tbody id="rows"></tbody>
@@ -188,6 +209,34 @@ function renderRows(rows) {
   }).join('');
 }
 
+let allRows = [];
+let currentFilter = 'ALL';
+
+function applyFilters() {
+  const search = document.getElementById('search-input').value.trim().toLowerCase();
+  let filtered = allRows;
+  if (currentFilter !== 'ALL') {
+    filtered = filtered.filter(r => r.status === currentFilter);
+  }
+  if (search) {
+    filtered = filtered.filter(r => r.wiki.toLowerCase().includes(search));
+  }
+  document.getElementById('row-count').textContent =
+    `${filtered.length} of ${allRows.length} wikis` + (currentFilter !== 'ALL' || search ? ' (filtered)' : '');
+  renderRows(filtered);
+}
+
+document.getElementById('filter-bar').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.status;
+  applyFilters();
+});
+
+document.getElementById('search-input').addEventListener('input', applyFilters);
+
 async function refresh() {
   const resp = await fetch('/api/merged');
   const data = await resp.json();
@@ -195,7 +244,6 @@ async function refresh() {
   document.getElementById('status').innerHTML =
     `<span class="live-dot"></span>live &nbsp;|&nbsp; ${data.generated_at ? data.generated_at.split('.')[0].replace('T',' ') + ' UTC' : 'n/a'} &nbsp;|&nbsp; ${data.window_minutes}-min window`;
   document.getElementById('window-pill').textContent = data.window_minutes + '-min window';
-  document.getElementById('row-count').textContent = data.rows.length + ' wikis tracked';
 
   const s = data.summary;
   document.getElementById('cards').innerHTML = `
@@ -206,7 +254,8 @@ async function refresh() {
     <div class="card c5"><div class="label">Low-data</div><div class="value">${s.low_data_count}</div><div class="hint">baseline too thin to trust</div></div>
   `;
 
-  renderRows(data.rows);
+  allRows = data.rows;
+  applyFilters();
 }
 
 refresh();
@@ -318,7 +367,8 @@ def build_merged_view(batch_path, speed_path):
         "low_data_count": sum(1 for r in rows if r["status"] == "LOW-DATA"),
     }
 
-    rows = rows[:TOP_N]
+    if TOP_N is not None:
+        rows = rows[:TOP_N]
 
     return {
         "generated_at": speed.get("generated_at"),
