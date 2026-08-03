@@ -46,6 +46,24 @@ TOP_N = 20
 SURGE_THRESHOLD = 2.0
 QUIET_THRESHOLD = 0.5
 
+# A wiki's "expected" baseline can be a tiny fraction of an edit per
+# window (e.g. 0.02) if it barely appears in the archive at all. Raw
+# live_count / expected in that regime is not a meaningful signal --
+# a single incidental edit against an expected 0.02 produces a ~50x
+# "deviation" that looks like a dramatic surge but is really just
+# sampling noise from an under-observed baseline. Below this expected
+# threshold we don't trust the ratio enough to call it SURGE/QUIET/
+# NORMAL, and label it LOW-DATA instead so the dashboard doesn't
+# misrepresent statistical noise as a real anomaly.
+MIN_EXPECTED_FOR_CONFIDENT_RATIO = 1.0
+
+# Small additive smoothing constant applied to both live and expected
+# counts before dividing. Standard technique for stabilising ratios of
+# small counts (keeps a lone live edit against a borderline-confident
+# baseline from swinging wildly) without changing the ratio much once
+# counts are reasonably large.
+DEVIATION_SMOOTHING = 0.5
+
 PAGE_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +86,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     margin-right: 4px; animation: pulse 1.6s ease-in-out infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+  .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 26px; }
   .card { background: linear-gradient(160deg, #1a1229, #150e22); border-left: 3px solid var(--accent, #a78bfa);
     border-radius: 10px; padding: 16px 18px; }
   .card .label { font-size: 11px; color: #8b83a3; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
@@ -78,6 +96,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   .card.c2 { --accent: #fb7185; } .card.c2 .value { color: #fb7185; }
   .card.c3 { --accent: #38bdf8; } .card.c3 .value { color: #38bdf8; }
   .card.c4 { --accent: #4ade80; } .card.c4 .value { color: #4ade80; }
+  .card.c5 { --accent: #6f6889; } .card.c5 .value { color: #a89fc2; }
 
   .panel { background: #150e22; border-radius: 10px; overflow: hidden; }
   .panel-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; }
@@ -97,11 +116,13 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   td.num { color: #a89fc2; }
   .deviation { font-weight: 700; font-size: 14px; }
   .dev-surge { color: #fb7185; } .dev-normal { color: #a89fc2; } .dev-quiet { color: #38bdf8; } .dev-new { color: #facc15; }
+  .dev-lowdata { color: #6f6889; }
   .status-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 999px; letter-spacing: 0.5px; }
   .badge-surge { background: rgba(251,113,133,0.15); color: #fb7185; }
   .badge-normal { background: rgba(168,159,194,0.12); color: #a89fc2; }
   .badge-quiet { background: rgba(56,189,248,0.15); color: #38bdf8; }
   .badge-new { background: rgba(250,204,21,0.15); color: #facc15; }
+  .badge-lowdata { background: rgba(111,104,137,0.15); color: #8b83a3; }
   .empty { padding: 26px 18px; color: #6f6889; font-size: 13px; }
 </style>
 </head>
@@ -126,6 +147,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       <span class="dev-normal">&#9679; normal</span>
       <span class="dev-quiet">&#9679; quiet (&le;0.5x baseline)</span>
       <span class="dev-new">&#9679; new activity, no baseline yet</span>
+      <span class="dev-lowdata">&#9679; low-data (baseline too small to trust a ratio)</span>
     </div>
     <table>
       <thead><tr><th></th><th>Wiki</th><th>Live (window)</th><th>Expected (baseline)</th><th>Deviation</th><th>Status</th></tr></thead>
@@ -140,6 +162,7 @@ function statusInfo(status) {
     NORMAL: { cls: 'dev-normal', badge: 'badge-normal', label: 'NORMAL' },
     QUIET:  { cls: 'dev-quiet',  badge: 'badge-quiet',  label: 'QUIET' },
     NEW:    { cls: 'dev-new',    badge: 'badge-new',    label: 'NEW' },
+    'LOW-DATA': { cls: 'dev-lowdata', badge: 'badge-lowdata', label: 'LOW-DATA' },
   };
   return map[status] || map.NORMAL;
 }
@@ -180,6 +203,7 @@ async function refresh() {
     <div class="card c2"><div class="label">Surging</div><div class="value">${s.surge_count}</div><div class="hint">&ge;2x normal rate</div></div>
     <div class="card c3"><div class="label">Quiet</div><div class="value">${s.quiet_count}</div><div class="hint">&le;0.5x normal rate</div></div>
     <div class="card c4"><div class="label">New activity</div><div class="value">${s.new_count}</div><div class="hint">no baseline yet</div></div>
+    <div class="card c5"><div class="label">Low-data</div><div class="value">${s.low_data_count}</div><div class="hint">baseline too thin to trust</div></div>
   `;
 
   renderRows(data.rows);
@@ -203,14 +227,23 @@ def load_json(path, default):
             return default
 
 
-def classify(deviation):
-    if deviation is None:
+def classify(deviation, has_baseline, low_data):
+    if not has_baseline:
         return "NEW"
+    if low_data:
+        return "LOW-DATA"
     if deviation >= SURGE_THRESHOLD:
         return "SURGE"
     if deviation <= QUIET_THRESHOLD:
         return "QUIET"
     return "NORMAL"
+
+
+# Rows are ranked so that statistically confident signals (SURGE, then
+# NORMAL, then QUIET) always sit above rows we don't trust enough to
+# classify (LOW-DATA, NEW) -- otherwise a LOW-DATA row with an inflated
+# ratio could still crowd out a genuine, well-supported SURGE.
+STATUS_GROUP_RANK = {"SURGE": 3, "NORMAL": 2, "QUIET": 1, "LOW-DATA": 0, "NEW": 0}
 
 
 def build_merged_view(batch_path, speed_path):
@@ -233,20 +266,30 @@ def build_merged_view(batch_path, speed_path):
         live_count = wiki_stats.get(wiki, {}).get("count", 0)
         batch_entry = batch_wikis.get(wiki)
 
+        has_baseline = bool(batch_entry) and bool(span_minutes)
         expected = None
-        if batch_entry and span_minutes:
+        deviation = None
+        low_data = False
+
+        if has_baseline:
             total_edits = batch_entry.get("edit_count", 0)
             expected = total_edits * (window_minutes / span_minutes)
+            low_data = expected < MIN_EXPECTED_FOR_CONFIDENT_RATIO
+            if not low_data:
+                # Additive smoothing stabilises the ratio near the
+                # confidence boundary; negligible effect once counts
+                # are comfortably large.
+                deviation = (live_count + DEVIATION_SMOOTHING) / (expected + DEVIATION_SMOOTHING)
 
-        if expected is not None and expected > 0:
-            deviation = live_count / expected
-        elif expected is not None and expected == 0 and live_count == 0:
-            deviation = 1.0  # both zero -> treat as "normal" (nothing happening, as expected)
-        else:
-            deviation = None  # no usable baseline -> NEW
+        status = classify(deviation, has_baseline, low_data)
 
-        status = classify(deviation)
-        sort_key = deviation if deviation is not None else (float("inf") if live_count > 0 else -1)
+        # Rank confident rows (SURGE/NORMAL/QUIET) above LOW-DATA/NEW,
+        # then order within each group by the most relevant metric:
+        # deviation for confident rows, raw live count otherwise (so an
+        # unclassifiable wiki with a lot of live activity still surfaces
+        # above one with a single stray edit).
+        secondary = deviation if deviation is not None else live_count
+        sort_key = (STATUS_GROUP_RANK[status], secondary)
 
         rows.append({
             "wiki": wiki,
@@ -272,6 +315,7 @@ def build_merged_view(batch_path, speed_path):
         "surge_count": sum(1 for r in rows if r["status"] == "SURGE"),
         "quiet_count": sum(1 for r in rows if r["status"] == "QUIET"),
         "new_count": sum(1 for r in rows if r["status"] == "NEW"),
+        "low_data_count": sum(1 for r in rows if r["status"] == "LOW-DATA"),
     }
 
     rows = rows[:TOP_N]
