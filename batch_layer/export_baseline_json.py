@@ -36,8 +36,16 @@ from collections import defaultdict
 # otherwise blow up min()/max() to a value years off, which silently
 # wrecks the "expected edits per window" calculation for every wiki
 # (division by a near-zero span produces absurd deviation multipliers).
-MIN_VALID_TIME_MS = 1577836800000  # 2020-01-01, well before this project
+#
+# A fixed "2020-01-01" floor turned out to be too loose in practice --
+# a single corrupt record with a timestamp merely *near* that floor
+# still passed the check and dragged the computed span out to years,
+# instead of the few days/weeks this archive actually covers. Since
+# this project only ever ingests a short, recent live-capture window,
+# bound the accepted range relative to "now" instead of a fixed date.
+MAX_ARCHIVE_AGE_DAYS = 30
 MAX_VALID_TIME_MS = int(time.time() * 1000) + 86400000  # now + 1 day buffer
+MIN_VALID_TIME_MS = MAX_VALID_TIME_MS - (MAX_ARCHIVE_AGE_DAYS + 1) * 86400000
 
 
 def main():
