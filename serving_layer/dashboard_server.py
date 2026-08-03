@@ -71,7 +71,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Lambdascope</title>
+<title>WIKIDRIFT</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -141,8 +141,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
   <header>
     <div class="brand-row">
-      <span class="brand">LAMBDASCOPE</span>
-      <span class="subtitle">activity deviation detector -- live rate vs. historical baseline, per wiki</span>
+      <span class="brand">WIKIDRIFT</span>
+      <span class="subtitle">WIKI activity deviation detector : live rate vs. historical baseline</span>
     </div>
     <div class="status" id="status"><span class="live-dot"></span>connecting...</div>
   </header>
